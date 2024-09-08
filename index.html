@@ -37,15 +37,35 @@
                     <div>Contact Us</div>
                 </div>
 
-                <div class="mr-10 flex md:hidden flex-col gap-2 my-auto cursor-pointer">
+                <div id="open-btn" class="mr-10 flex md:hidden flex-col gap-2 my-auto cursor-pointer">
                     <div class="w-8 h-1 rounded-full bg-white"></div>
                     <div class="w-8 h-1 rounded-full bg-white"></div>
                     <div class="w-8 h-1 rounded-full bg-white"></div>
                 </div>
             </div>
+            
            
         </nav>
      </header>
+        <!-- secondary header  -->
+        <div id="mob-nav" class="w-screen h-screen bg-[#1A3718] flex flex-col items-center -translate-x-[50rem] transition-transform duration-500 drop-shadow-2xl  md:hidden gap-16 fixed z-[1001] ">
+            <div id="close-btn" class="text-white ml-auto mr-6 mt-10 cursor-pointer">Close</div>
+            <div id="nav-logo" class="w-24 h-24 border-4 border-[#2F5325] mt-16  bg-white rounded-full">
+                <img src="assets/images/logo/barrackbuddy-logo-1@2x.png" alt="logo">
+            </div>
+            
+            <div class="text-white flex flex-col justify-center items-center gap-16 text-2xl">
+                <div>About Us</div>
+                <div>Free Notes</div>
+                <div>Contact Us</div>
+            </div>
+            
+            <div id="secondary-footer" class="py-20 absolute text-white top-auto bottom-0">
+                <div class="text-center">Designd by Barracks Buddy (2024) </div>
+            </div>
+
+        </div>
+        <!-- end of secondary header  -->
     <!-- end of header  -->
 
 
@@ -160,6 +180,8 @@
         <div class="bg-[#2F5325] w-screen py-10 text-white text-center">Barracks Buddy, All Rights Researved (2024) </div>
      </footer>
      <!-- end of footer  -->
+
+     <script src="src/js/script.js"></script>
   
 </body>
 </html>
