@@ -1323,6 +1323,11 @@ video {
   border-style: solid;
 }
 
+.border-\[\#1A3718\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(26 55 24 / var(--tw-border-opacity));
+}
+
 .border-\[\#2F5325\] {
   --tw-border-opacity: 1;
   border-color: rgb(47 83 37 / var(--tw-border-opacity));
@@ -1693,10 +1698,6 @@ video {
 
 .duration-500 {
   transition-duration: 500ms;
-}
-
-.duration-300 {
-  transition-duration: 300ms;
 }
 
 .\[_\:\FFFD\7F\FFFD 3r\FFFD\7F\FFFD\FFFDqz\?7\FFFD\1B\&\^\] {
