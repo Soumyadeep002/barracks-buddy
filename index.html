@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barrack's Buddy</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -53,7 +55,7 @@
             <div id="close-btn" class="text-white ml-auto mr-12 mt-10 text-5xl cursor-pointer">
                 <i class="fa-solid fa-angle-left"></i>
             </div>
-            <div id="nav-logo" class="w-24 h-24 border-4 border-[#2F5325] mt-16  bg-white rounded-full">
+            <div id="nav-logo" class="w-24 h-24 border-4 border-[#2F5325] mt-8  bg-white rounded-full">
                 <a href="/index.html"><img src="assets/images/logo/barrackbuddy-logo-1@2x.png" alt="logo"></a>
             </div>
             
@@ -70,7 +72,7 @@
                         <a href="#"><i class="fa-brands fa-youtube"></i></a>
                         <a href="#"><i class="fa-brands fa-telegram"></i></a>
                     </div>
-                    <p>Designd by Barracks Buddy (2024)</p>
+                    <p>© Designd by Barracks Buddy (2024)</p>
                  </div>
             </div>
 
@@ -89,8 +91,8 @@
                     <h3 class="font-semibold text-2xl md:text-3xl" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-easing="ease-in">NDA | CDS | CAPF | AFCAT</h3>
                     <h1 class="text-5xl md:text-6xl lg:text-8xl text-[#1A3718] font-semibold" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-easing="ease-in">थोड़ी पढ़ाई कर लें?</h1>
                     <div class="socials flex gap-8 mt-8">
-                        <div class="flex justify-center items-center gap-2" data-aos="fade-right" data-aos-duration="500" data-aos-delay="200" data-aos-easing="ease-in"><i class="fa-brands fa-square-instagram text-3xl text-pink-600"></i><span>telegram</span></div>
-                        <div class="flex justify-center items-center gap-2" data-aos="fade-right" data-aos-duration="500" data-aos-delay="200" data-aos-easing="ease-in"><i class="fa-brands fa-telegram text-3xl text-blue-600"></i><span>Instagram</span></div>
+                        <a href="#"><div class="flex justify-center items-center gap-2" data-aos="fade-right" data-aos-duration="500" data-aos-delay="200" data-aos-easing="ease-in"><i class="fa-brands fa-telegram text-3xl text-blue-600"></i><span>telegram</span></div></a>
+                        <a href="#"><div class="flex justify-center items-center gap-2" data-aos="fade-right" data-aos-duration="500" data-aos-delay="200" data-aos-easing="ease-in"><i class="fa-brands fa-square-instagram text-3xl text-pink-600"></i><span>Instagram</span></div></a>
                     </div>
                 </div>
                 
@@ -160,26 +162,38 @@
 
         <!-- Youtube Thumbnail  -->
         <section id="youtube" class="py-16">
-            <div class="w-full md:w-5/6 mx-auto pt-16 md:pt-24 px-5">
+            <div class=" w-full md:w-5/6 mx-auto pt-16 md:pt-24 px-5">
                 <h1 class="font-bold text-3xl md:text-4xl lg:text-5xl my-7 mx-5">Latest on Youtube:</h1>
-                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-5 bg-slate-200 rounded-3xl px-3 py-5">
+                <div class="swiper mySwiper flex flex-wrap justify-center items-center gap-8 md:gap-5 bg-slate-200 rounded-3xl px-3 py-5">
 
-                    <!-- Team card  --> 
-                    <div class="card  bg-slate-200 max-w-fit rounded-3xl overflow-hidden">
-                        <img class="w-[30rem]" src="assets/images/tb27-1@2x.png" alt="member 1">
+                    <div class="swiper-wrapper">
+                        <!-- Team card  --> 
+                        <div class="card swiper-slide bg-slate-200 max-w-fit rounded-3xl overflow-hidden">
+                            <img class="w-[30rem]" src="assets/images/tb27-1@2x.png" alt="member 1">
+                        </div>
+                        <div class="card swiper-slide bg-slate-200 max-w-fit rounded-3xl overflow-hidden">
+                            <img class="w-[30rem]" src="assets/images/tb27-1@2x.png" alt="member 1">
+                        </div>
+                        <div class="card swiper-slide bg-slate-200 max-w-fit rounded-3xl overflow-hidden">
+                            <img class="w-[30rem]" src="assets/images/tb27-1@2x.png" alt="member 1">
+                        </div>
+                        <div class="card swiper-slide bg-slate-200 max-w-fit rounded-3xl overflow-hidden">
+                            <img class="w-[30rem]" src="assets/images/tb27-1@2x.png" alt="member 1">
+                        </div>
+                        <div class="card swiper-slide bg-slate-200 max-w-fit rounded-3xl overflow-hidden">
+                            <img class="w-[30rem]" src="assets/images/tb27-1@2x.png" alt="member 1">
+                        </div>
                     </div>
-                    <div class="card  bg-slate-200 max-w-fit rounded-3xl overflow-hidden">
-                        <img class="w-[30rem]" src="assets/images/tb27-1@2x.png" alt="member 1">
-                    </div>
-                    <div class="card  bg-slate-200 max-w-fit rounded-3xl overflow-hidden">
-                        <img class="w-[30rem]" src="assets/images/tb27-1@2x.png" alt="member 1">
-                    </div>
+                    <div class="swiper-pagination"></div>
                     <!-- end of Team card  -->
                 </div>
+               
             </div>
         </section>
         <!-- end of Youtube Thumbnail  -->
      </main>
+
+
 
 
 
@@ -192,16 +206,65 @@
                 <a href="#"><i class="fa-brands fa-youtube"></i></a>
                 <a href="#"><i class="fa-brands fa-telegram"></i></a>
             </div>
-            <p>Barracks Buddy, All Rights Researved (2024) </p>
+            <p>© Barracks Buddy, All Rights Researved (2024) </p>
         </div>
      </footer>
      <!-- end of footer  -->
 
      <!-- js  -->
-     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+      <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 32,
+      loop: true,
+      freeMode: true,
+      autoplay: {
+        delay: 1000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 2,
+      },
+      // when window width is >= 480px
+      480: {
+        slidesPerView: 1,
+        spaceBetween: 2,
+      },
+      // when window width is >= 768px
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      // when window width is >= 1024px
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 32,
+      },
+    },
+    });
+  </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
         <script>
             AOS.init();
         </script>
+
+
+
+
 
      <script src="src/js/script.js"></script>
   

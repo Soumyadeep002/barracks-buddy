@@ -763,10 +763,6 @@ video {
   margin-top: -4.2px;
 }
 
-.mb-0 {
-  margin-bottom: 0px;
-}
-
 .mt-auto {
   margin-top: auto;
 }
@@ -875,6 +871,10 @@ video {
   height: 81.7px;
 }
 
+.h-\[85vh\] {
+  height: 85vh;
+}
+
 .h-\[86\.7px\] {
   height: 86.7px;
 }
@@ -898,14 +898,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[80vh\] {
-  height: 80vh;
-}
-
-.h-\[85vh\] {
-  height: 85vh;
 }
 
 .max-h-full {
