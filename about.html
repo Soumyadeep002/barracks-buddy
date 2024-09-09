@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barrack's Buddy</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        *{
+            
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            scroll-behavior: smooth;
+            scroll-padding: 30px;
+            }
+
+    </style>
+        
+</head>
+<body class="overflow-x-hidden">
+    <!-- header  -->
+     <header class="fixed z-[1000] drop-shadow-2xl">
+        <nav class="">
+            <div class="bg-[#2F5325] z-10 w-screen flex h-20 lg:h-[7.5rem] justify-between">
+                <div class="flex bg-white w-fit h-fit rounded-full border-4 border-[#1A3718] relative translate-y-4 translate-x-8 lg:translate-y-11 lg:translate-x-32">
+                    <a href="/index.html"><img src="assets/images/logo/barrackbuddy-logo-1@2x.png" class="w-24 h-24 lg:w-32 lg:h-32  aspect-square " alt="logo"></a>
+                </div>
+
+                <div class="hidden md:flex md:w-2/3 lg:w-3/5 xl:w-1/4 text-2xl mr-14 text-white h-full items-center justify-between gap-x-10">
+                    <a href="/about.html"><div>About Us</div></a>
+                    <a href="#"><div>Free Notes</div></a>
+                    <a href="/contact.html"><div>Contact Us</div></a>
+                </div>
+
+                <div id="open-btn" class="mr-10 flex items-end md:hidden flex-col gap-2 my-auto cursor-pointer">
+                    <div class="w-5 h-1 rounded-full bg-white"></div>
+                    <div class="w-9 h-1 rounded-full bg-white"></div>
+                    <div class="w-7 h-1 rounded-full bg-white"></div>
+                </div>
+            </div>
+            
+           
+        </nav>
+     </header>
+        <!-- secondary header  -->
+        <div id="mob-nav" class="w-screen h-screen bg-[#1A3718] flex flex-col items-center -translate-x-[50rem] transition-transform duration-500 drop-shadow-2xl  md:hidden gap-16 fixed z-[1001] ">
+            <div id="close-btn" class="text-white ml-auto mr-12 mt-10 text-5xl cursor-pointer">
+                <i class="fa-solid fa-angle-left"></i>
+            </div>
+            <div id="nav-logo" class="w-24 h-24 border-4 border-[#2F5325] mt-16  bg-white rounded-full">
+                <a href="/index.html"><img src="assets/images/logo/barrackbuddy-logo-1@2x.png" alt="logo"></a>
+            </div>
+            
+            <div class="text-white flex flex-col justify-center items-center gap-16 text-2xl">
+                <a href="/about.html"><div>About Us</div></a>
+                <a href="#"><div>Free Notes</div></a>
+                <a href="/contact.html"><div>Contact Us</div></a>
+            </div>
+            
+            <div id="secondary-footer" class="py-20 absolute text-white top-auto bottom-0">
+                <div class="flex flex-col justify-center items-center gap-7">
+                    <div class="icons flex flex-row gap-x-6 text-3xl">
+                        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                    </div>
+                    <p>Designd by Barracks Buddy (2024)</p>
+                 </div>
+            </div>
+
+        </div>
+        <!-- end of secondary header  -->
+    <!-- end of header  -->
+
+
+
+    <main>
+        <section id="about-us" class="pb-16 pt-36 lg:pt-52 h-[85vh]">
+            <h1 class="text-4xl text-center font-bold">About Us</h1>
+        </section>
+    </main>
+
+
+
+    
+     <!-- footer  -->
+     <footer>
+        
+        <div class="bg-[#2F5325] w-screen mt-auto py-7 md:py-10 text-white flex flex-col justify-center items-center gap-7 md:gap-10">
+            <div class="icons flex flex-row gap-x-6 text-3xl">
+                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+            <p>Barracks Buddy, All Rights Researved (2024) </p>
+        </div>
+     </footer>
+     <!-- end of footer  -->
+
+     <!-- js  -->
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+
+     <script src="src/js/script.js"></script>
+  
+</body>
+</html>
+
