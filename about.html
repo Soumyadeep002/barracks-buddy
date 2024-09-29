@@ -1,41 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barrack's Buddy</title>
     <link rel="stylesheet" href="src/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-        *{
-            
+        * {
+
             font-family: "Poppins", sans-serif;
             font-weight: 500;
             font-style: normal;
             scroll-behavior: smooth;
             scroll-padding: 30px;
-            }
-
+        }
     </style>
-        
+
 </head>
+
 <body class="overflow-x-hidden">
     <!-- header  -->
-     <header class="fixed z-[1000] drop-shadow-2xl">
+    <header class="fixed z-[1000] drop-shadow-2xl">
         <nav class="">
             <div class="bg-[#2F5325] z-10 w-screen flex h-20 lg:h-[7.5rem] justify-between">
-                <div class="flex bg-white w-fit h-fit rounded-full border-4 border-[#1A3718] relative translate-y-4 translate-x-8 lg:translate-y-11 lg:translate-x-32">
-                    <a href="index.html"><img src="assets/images/logo/barrackbuddy-logo-1@2x.png" class="w-24 h-24 lg:w-32 lg:h-32  aspect-square " alt="logo"></a>
+                <div
+                    class="flex bg-white w-fit h-fit rounded-full border-4 border-[#1A3718] relative translate-y-4 translate-x-8 lg:translate-y-11 lg:translate-x-32">
+                    <a href="index.html"><img src="assets/images/logo/barrackbuddy-logo-1@2x.png"
+                            class="w-24 h-24 lg:w-32 lg:h-32  aspect-square " alt="logo"></a>
                 </div>
 
-                <div class="hidden md:flex md:w-2/3 lg:w-3/5 xl:w-1/4 text-2xl mr-14 text-white h-full items-center justify-between gap-x-10">
-                    <a href="about.html"><div>About Us</div></a>
-                    <a href="#"><div>Free Notes</div></a>
-                    <a href="contact.html"><div>Contact Us</div></a>
+                <div
+                    class="hidden md:flex md:w-2/3 lg:w-3/5 xl:w-1/4 text-2xl mr-14 text-white h-full items-center justify-between gap-x-10">
+                    <a href="about.html">
+                        <div>About Us</div>
+                    </a>
+                    <a href="https://drive.google.com/drive/folders/1cDv-M8Vv3B4Nyn9wP_67v7OuchoyVusV?usp=drive_link">
+                        <div>Free Notes</div>
+                    </a>
+                    <a href="contact.html">
+                        <div>Contact Us</div>
+                    </a>
                 </div>
 
                 <div id="open-btn" class="mr-10 flex items-end md:hidden flex-col gap-2 my-auto cursor-pointer">
@@ -44,73 +55,161 @@
                     <div class="w-7 h-1 rounded-full bg-white"></div>
                 </div>
             </div>
-            
-           
-        </nav>
-     </header>
-        <!-- secondary header  -->
-        <div id="mob-nav" class="w-screen h-screen bg-[#1A3718] flex flex-col items-center -translate-x-[50rem] transition-transform duration-500 drop-shadow-2xl  md:hidden gap-10 fixed z-[1001] ">
-            <div id="close-btn" class="text-white ml-auto mr-12 mt-10 text-5xl cursor-pointer">
-                <i class="fa-solid fa-angle-left"></i>
-            </div>
-            <div id="nav-logo" class="w-24 h-24 border-4 border-[#2F5325] bg-white rounded-full">
-                <a href="index.html"><img src="assets/images/logo/barrackbuddy-logo-1@2x.png" alt="logo"></a>
-            </div>
-            
-            <div class="text-white flex flex-col justify-center items-center gap-16 text-2xl">
-                <a href="about.html"><div>About Us</div></a>
-                <a href="#"><div>Free Notes</div></a>
-                <a href="contact.html"><div>Contact Us</div></a>
-            </div>
-            
-            <div id="secondary-footer" class="py-20 absolute text-white top-auto bottom-0">
-                <div class="flex flex-col justify-center items-center gap-7">
-                    <div class="icons flex flex-row gap-x-6 text-3xl">
-                        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="#"><i class="fa-brands fa-telegram"></i></a>
-                    </div>
-                    <p>© Designd by Barracks Buddy (2024)</p>
-                 </div>
-            </div>
 
+
+        </nav>
+    </header>
+    <!-- secondary header  -->
+    <div id="mob-nav"
+        class="w-screen h-screen bg-[#1A3718] flex flex-col items-center -translate-x-[50rem] transition-transform duration-500 drop-shadow-2xl  md:hidden gap-10 fixed z-[1001] ">
+        <div id="close-btn" class="text-white ml-auto mr-12 mt-10 text-5xl cursor-pointer">
+            <i class="fa-solid fa-angle-left"></i>
         </div>
-        <!-- end of secondary header  -->
+        <div id="nav-logo" class="w-24 h-24 border-4 border-[#2F5325] bg-white rounded-full">
+            <a href="index.html"><img src="assets/images/logo/barrackbuddy-logo-1@2x.png" alt="logo"></a>
+        </div>
+
+        <div class="text-white flex flex-col justify-center items-center gap-16 text-2xl">
+            <a href="about.html">
+                <div>About Us</div>
+            </a>
+            <a href="https://drive.google.com/drive/folders/1cDv-M8Vv3B4Nyn9wP_67v7OuchoyVusV?usp=drive_link">
+                <div>Free Notes</div>
+            </a>
+            <a href="contact.html">
+                <div>Contact Us</div>
+            </a>
+        </div>
+
+        <div id="secondary-footer" class="py-20 absolute text-white top-auto bottom-0">
+            <div class="flex flex-col justify-center items-center gap-7">
+                <div class="icons flex flex-row gap-x-6 text-3xl">
+                    <a href="https://www.instagram.com/barracksbuddy/"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://www.youtube.com/@BarracksBuddy"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://t.me/barracksbuddy"><i class="fa-brands fa-telegram"></i></a>
+                </div>
+                <p>© Designd by Barracks Buddy (2024)</p>
+            </div>
+        </div>
+
+    </div>
+    <!-- end of secondary header  -->
     <!-- end of header  -->
 
 
 
     <main>
-        <section id="about-us" class="pb-16 pt-36 lg:pt-52 h-[85vh]">
+        <section id="about-us" class="pb-20 pt-36 lg:pt-52 ">
             <h1 class="text-4xl text-center font-bold">About Us</h1>
+            <div
+                class="w-full md:w-5/6 lg:w-11/12 mx-auto pt-16 md:pt-24 px-5 text-xl  md:text-2xl xl:text-3xl text-justify flex flex-col items-center gap-8">
+                <p>At Barrack’s Buddy, we see ourselves as your brothers and sisters, here to guide and support you with
+                    the experiences we’ve gained on the same journey you’re on as defense aspirants. We're not just
+                    trainers but a close-knit family of learners, committed to walking with you every step of the way.
+
+                </p>
+
+                <p>Together, we believe in learning from each other and taking responsibility as a family. With personal
+                    involvement and guidance, we aim to shape your future, just like we once worked to shape our own.
+                    Here, you’re never alone—because we’ve been where you are, and we’re with you all the way.</p>
+            </div>
         </section>
+
+
+        <section id="images">
+            <!-- Swiper -->
+            <div class="swiper mySwiper w-full md:w-5/6 lg:w-11/12 mx-auto mb-16">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img class="rounded-3xl w-[90%] md:w-full mx-auto" src="assets/images/gallery/1.webp"
+                            alt="image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="rounded-3xl w-[90%] md:w-full mx-auto" src="assets/images/gallery/2.webp"
+                            alt="image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="rounded-3xl w-[90%] md:w-full mx-auto" src="assets/images/gallery/3.webp"
+                            alt="image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="rounded-3xl w-[90%] md:w-full mx-auto" src="assets/images/gallery/4.webp"
+                            alt="image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="rounded-3xl w-[90%] md:w-full mx-auto" src="assets/images/gallery/5.webp"
+                            alt="image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
     </main>
 
 
 
-    
-     <!-- footer  -->
-     <footer>
-        
-        <div class="bg-[#2F5325] w-screen mt-auto py-7 md:py-10 text-white flex flex-col justify-center items-center gap-7 md:gap-10">
+
+    <!-- footer  -->
+    <footer>
+
+        <div
+            class="bg-[#2F5325] w-screen mt-auto py-7 md:py-10 text-white flex flex-col justify-center items-center gap-7 md:gap-10">
             <div class="icons flex flex-row gap-x-6 text-3xl">
-                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://www.instagram.com/barracksbuddy/"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://www.youtube.com/@BarracksBuddy"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://t.me/barracksbuddy"><i class="fa-brands fa-telegram"></i></a>
             </div>
             <p>© Barracks Buddy, All Rights Researved (2024) </p>
         </div>
-     </footer>
-     <!-- end of footer  -->
+    </footer>
+    <!-- end of footer  -->
 
-     <!-- js  -->
-     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
+    <!-- js  -->
 
-     <script src="src/js/script.js"></script>
-  
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 2,
+                },
+                480: {
+                    slidesPerView: 1,
+                    spaceBetween: 2,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 32,
+                },
+            },
+        });
+    </script>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="src/js/script.js"></script>
+
 </body>
-</html>
 
+</html>

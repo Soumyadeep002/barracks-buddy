@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barrack's Buddy</title>
     <link rel="stylesheet" href="src/css/style.css">
+   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <style>
@@ -34,7 +36,7 @@
 
                 <div class="hidden md:flex md:w-2/3 lg:w-3/5 xl:w-1/4 text-2xl mr-14 text-white h-full items-center justify-between gap-x-10">
                     <a href="about.html"><div>About Us</div></a>
-                    <a href="#"><div>Free Notes</div></a>
+                    <a href="https://drive.google.com/drive/folders/1cDv-M8Vv3B4Nyn9wP_67v7OuchoyVusV?usp=drive_link"><div>Free Notes</div></a>
                     <a href="contact.html"><div>Contact Us</div></a>
                 </div>
 
@@ -59,16 +61,16 @@
             
             <div class="text-white flex flex-col justify-center items-center gap-16 text-2xl">
                 <a href="about.html"><div>About Us</div></a>
-                <a href="#"><div>Free Notes</div></a>
+                <a href="https://drive.google.com/drive/folders/1cDv-M8Vv3B4Nyn9wP_67v7OuchoyVusV?usp=drive_link"><div>Free Notes</div></a>
                 <a href="contact.html"><div>Contact Us</div></a>
             </div>
             
             <div id="secondary-footer" class="py-20 absolute text-white top-auto bottom-0">
                 <div class="flex flex-col justify-center items-center gap-7">
                     <div class="icons flex flex-row gap-x-6 text-3xl">
-                        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="https://www.instagram.com/barracksbuddy/"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="https://www.youtube.com/@BarracksBuddy"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://t.me/barracksbuddy"><i class="fa-brands fa-telegram"></i></a>
                     </div>
                     <p>© Designd by Barracks Buddy (2024)</p>
                  </div>
@@ -82,8 +84,30 @@
 
     <main>
         
-        <section id="contact-us" class="pb-16 pt-36 lg:pt-52 h-[85vh]">
+        <section id="contact-us" class="pb-16 pt-36 lg:pt-52">
             <h1 class="text-center text-4xl font-bold">Contact Us</h1>
+
+                <div class="py-8 lg:py-16 px-4 mx-auto w-full md:w-3/4 lg:w-1/2">
+                    <form id="contactform" class="space-y-8">
+                        <div>
+                            <label for="email" class="block mb-2 text-lg font-medium text-gray-900 ">Your email</label>
+                            <input type="email" id="email" name="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-4" placeholder="name@email.com" required>
+                        </div>
+                        <div>
+                            <label for="exam" class="block mb-2 text-lg font-medium text-gray-900">Exam:</label>
+                            <input type="text" id="exam" name="exam" class="block p-4 w-full text-lg text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500" placeholder="NDA | CDS | CAPF | AFCAT" required>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label for="message" class="block mb-2 text-lg font-medium text-gray-900 ">Your message</label>
+                            <textarea id="message" rows="6" name="message" class="block p-4 w-full text-lg text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500" placeholder="Leave a comment..."></textarea>
+                        </div>
+                        <button id="sub" type="submit" class="py-4 px-7 text-lg font-medium text-center duration-150 text-white rounded-lg bg-[#1A3718] sm:w-fit hover:bg-[#435d40c9] focus:ring-4 focus:outline-none focus:ring-[#5ab154e8]">Send message</button>
+                    </form>
+                </div>
+
+
+
+
         </section>
 
     </main>
@@ -95,11 +119,11 @@
     <footer>
        
        <div class="bg-[#2F5325] w-screen mt-auto py-7 md:py-10 text-white flex flex-col justify-center items-center gap-7 md:gap-10">
-           <div class="icons flex flex-row gap-x-6 text-3xl">
-               <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
-               <a href="#"><i class="fa-brands fa-youtube"></i></a>
-               <a href="#"><i class="fa-brands fa-telegram"></i></a>
-           </div>
+        <div class="icons flex flex-row gap-x-6 text-3xl">
+            <a href="https://www.instagram.com/barracksbuddy/"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://www.youtube.com/@BarracksBuddy"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://t.me/barracksbuddy"><i class="fa-brands fa-telegram"></i></a>
+        </div>
            <p>© Barracks Buddy, All Rights Researved (2024) </p>
        </div>
     </footer>
@@ -110,8 +134,31 @@
        <script>
            AOS.init();
        </script>
+       
+        <script>
+
+             let form = document.querySelector("#contactform");
+                    form.addEventListener('submit', (e) => {
+                        e.preventDefault();
+                        document.querySelector("#sub").value = "Sending...";
+                        let data = new FormData(form);
+
+                        fetch('https://script.google.com/macros/s/AKfycbzwXb-r10eCenlifx6MtRT3LYoAFroIPd7Fu4gjmpT9aQcfM0clVSNOfTqrBCAiNeUh/exec', {
+                                method: "POST",
+                                mode: "no-cors",
+                                body: data
+                            })
+                            .then(res => res.text())
+                            .then(data => {
+                                document.querySelector("#sub").value = "Send message"
+                                alert("Your message has sent sucessfully! We will contact you shortly")
+                            });
+                    })
+
+        </script>
 
     <script src="src/js/script.js"></script>
+
  
 </body>
 </html>
