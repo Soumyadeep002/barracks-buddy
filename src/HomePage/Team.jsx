@@ -28,9 +28,9 @@ import Member15 from '../../public/images/Members/Yogita Chaudhary.png'
 export default function Team() {
   return (
     <>
-          <div className="w-full md:w-[100%] lg:w-11/12 mx-auto py-10 sm:py-12 md:py-16 px-5">
-                <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl my-7 mx-5 md:mx-16">Our Team:</h1>
-                <div className="flex justify-center items-center md:w-5/6 lg:w-3/4 mx-auto">
+          <div className="w-full md:w-[90%] lg:w-[70%] mx-auto py-10 sm:py-12 md:py-16 px-5">
+          <h1 className='font-bold text-3xl ml-4 mb-5'>Our Team: </h1>
+          <div className="flex justify-center items-center mx-auto">
                             <Swiper
                             freeMode={true}
                             pagination={{ clickable: true }}
@@ -51,7 +51,7 @@ export default function Team() {
                                     },
                                 720: {
                                 slidesPerView: 3,
-                                spaceBetween: 20,
+                                spaceBetween: 30,
                                 },
                                 1024: {
                                 slidesPerView: 4,

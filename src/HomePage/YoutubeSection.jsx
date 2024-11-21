@@ -17,7 +17,7 @@ export default function YoutubeSection() {
   return (
     <section className='py-16 px-5 md:w-[90%] lg:w-[70%] mx-auto'>
         <h1 className='font-bold text-3xl ml-4 mb-5'>Latest on YouTube: </h1>
-        <div className="bg-gray-300  overflow-hidden mx-auto rounded-[2.5rem] ">
+        <div className="bg-gray-300 px-5 overflow-hidden mx-auto rounded-[2.5rem] ">
         <Swiper
                             freeMode={true}
                             pagination={{ clickable: true }}
@@ -46,23 +46,23 @@ export default function YoutubeSection() {
                                 },
                             }}
                             modules={[Autoplay]}
-                            className="mx-auto my-6"
+                            className="mx-auto my-5"
                             >
 
                         <SwiperSlide>
-                            <img className="mx-auto rounded-3xl" src={img1} alt="" />
+                            <img className="mx-auto rounded-[2.1rem]" src={img1} alt="" />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img className="mx-auto rounded-3xl" src={img2} alt="" />
+                            <img className="mx-auto rounded-[2.1rem]" src={img2} alt="" />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img className="mx-auto rounded-3xl" src={img3} alt="" />
+                            <img className="mx-auto rounded-[2.1rem]" src={img3} alt="" />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img className="mx-auto rounded-3xl" src={img4} alt="" />
+                            <img className="mx-auto rounded-[2.1rem]" src={img4} alt="" />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img className="mx-auto rounded-3xl" src={img5} alt="" />
+                            <img className="mx-auto rounded-[2.15rem]" src={img5} alt="" />
                         </SwiperSlide>
                       
 
