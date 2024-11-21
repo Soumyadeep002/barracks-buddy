@@ -25,7 +25,7 @@ export default function YoutubeSection() {
                             loop={true}
                             autoplay={{
                                 delay: 3000,
-                                disableOnInteraction: false,
+                                disableOnInteraction: true,
                               }}
                             breakpoints={{
                                 320: {
@@ -37,10 +37,10 @@ export default function YoutubeSection() {
                                     spaceBetween: 20,
                                     },
                                 720: {
-                                slidesPerView: 3,
+                                slidesPerView: 2,
                                 spaceBetween: 20,
                                 },
-                                1024: {
+                                1400: {
                                 slidesPerView: 3,
                                 spaceBetween: 30,
                                 },
@@ -50,20 +50,46 @@ export default function YoutubeSection() {
                             >
 
                         <SwiperSlide>
-                            <img className="mx-auto rounded-[2.1rem]" src={img1} alt="" />
+                            {/* <img className="mx-auto rounded-[2.1rem]" src={img1} alt="" /> */}
+                            <iframe
+                                className="w-full h-[15.5rem] rounded-[2.1rem]"
+                                src={`https://www.youtube.com/embed/_cZIqamov4s`}
+                                title={`YouTube video player 1`}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img className="mx-auto rounded-[2.1rem]" src={img2} alt="" />
+                            {/* <img className="mx-auto rounded-[2.1rem]" src={img1} alt="" /> */}
+                            <iframe
+                                className="w-full h-[15.5rem] rounded-[2.1rem]"
+                                src={`https://www.youtube.com/embed/e5S3ceN6oag`}
+                                title={`YouTube video player 2`}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img className="mx-auto rounded-[2.1rem]" src={img3} alt="" />
+                            {/* <img className="mx-auto rounded-[2.1rem]" src={img1} alt="" /> */}
+                            <iframe
+                                className="w-full h-[15.5rem] rounded-[2.1rem]"
+                                src={`https://www.youtube.com/embed/gGLAkii3Z3U`}
+                                title={`YouTube video player 3`}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img className="mx-auto rounded-[2.1rem]" src={img4} alt="" />
+                            {/* <img className="mx-auto rounded-[2.1rem]" src={img1} alt="" /> */}
+                            <iframe
+                                className="w-full h-[15.5rem] rounded-[2.1rem]"
+                                src={`https://www.youtube.com/embed/Fz_KhUGuLfM`}
+                                title={`YouTube video player 4`}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
                         </SwiperSlide>
-                        <SwiperSlide>
-                            <img className="mx-auto rounded-[2.15rem]" src={img5} alt="" />
-                        </SwiperSlide>
+
                       
 
                     </Swiper>

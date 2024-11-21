@@ -41,9 +41,7 @@ export default function Navbar() {
 
                 <div className="hidden md:flex md:w-5/6 lg:5/6 md:text-lg lg:text-xl mr-14 md:mr-5 lg:mr-5 xl:mr-20 text-white h-full items-center justify-end md:gap-x-5 lg:gap-x-6 xl:gap-x-12">
 
-                    <a href="about.html"><div>About Us</div></a>
-                    <a href="about.html"><div>About Us</div></a>
-                    <a href="about.html"><div>About Us</div></a>
+           
                     <a href="about.html"><div>About Us</div></a>
                     <a href="https://drive.google.com/drive/folders/1cDv-M8Vv3B4Nyn9wP_67v7OuchoyVusV?usp=drive_link"><div>Free Notes</div></a>
                     <a href="contact.html"><div>Contact Us</div></a>
