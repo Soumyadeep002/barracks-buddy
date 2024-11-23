@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Navigate } from 'react-router-dom';
-import axios from 'axios';
-// import baseUrl from '../baseUrl';
-// import Loading from '../components/loading';
+import React, { useState, useEffect } from "react";
+import { Navigate } from "react-router-dom";
+import axios from "axios";
+import { BaseUrl } from "../enviroment/Enviroment";
 
 const AuthGuard = ({ element }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -11,17 +10,20 @@ const AuthGuard = ({ element }) => {
 
   useEffect(() => {
     const checkAuthorization = async () => {
-      if (!token) {
-        setIsAuthorized(false);
-        setIsLoading(false);
-        return;
-      }
-
       try {
-        const response = await axios.get(`${baseUrl}/api/me/hello`, {
-          headers: { "x-auth-token": token }
-        });
-        setIsAuthorized(response.data.role === "USER");
+        const response = await axios.post(
+          `${BaseUrl}/api/authguard`,
+          {},
+          {
+            headers: {
+              Authorization: `Bearer ${token}`, 
+            },
+          }
+        );
+        if (response.data.code === 200) {
+          console.log("Authorized");
+          setIsAuthorized(true);
+        }
       } catch (error) {
         console.error("Authorization error:", error);
         setIsAuthorized(false);
@@ -33,9 +35,14 @@ const AuthGuard = ({ element }) => {
     checkAuthorization();
   }, [token]);
 
-//   if (isLoading) {
-//     return <Loading />;
-//   }
+
+  useEffect(() => {
+    console.log("isAuthorized:", isAuthorized);
+  }, [isAuthorized]);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
   return isAuthorized ? element : <Navigate to="/login" />;
 };

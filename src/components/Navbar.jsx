@@ -33,17 +33,16 @@ export default function Navbar() {
         setMobileMenuOpen(!MobilemenuOpen);
     };
 
-
     return (
         <>
             <header className="fixed z-[1000] drop-shadow-2xl">
                 <nav className="">
                     <div className="bg-[#2F5325] z-10 w-screen flex h-16 sm:h-20 md:h-[6rem] lg:h-[6.5rem] justify-between">
                         <div className="flex bg-white w-fit h-fit rounded-full border-4 border-[#1A3718] relative translate-x-8 translate-y-6 sm:translate-y-8 md:translate-y-8 lg:translate-y-8 lg:translate-x-32">
-                            <Link to='/'><img src={Logo} className=" w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 lg:w-32 lg:h-32  aspect-square " alt="logo" /></Link>
+                            <Link to="/"><img src={Logo} className=" w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 lg:w-32 lg:h-32  aspect-square " alt="logo" /></Link>
                         </div>
-
                         <div className="hidden md:flex md:w-5/6 lg:5/6 md:text-lg lg:text-xl mr-14 md:mr-5 lg:mr-5 xl:mr-20 text-white h-full items-center justify-end md:gap-x-5 lg:gap-x-6 xl:gap-x-12">
+                        <Link to='/'><div>Home</div></Link>
                             <Link to='/about'><div>About Us</div></Link>
                             <Link to='/courses'><div>Courses</div></Link>
                             <Link to='/free-notes'><div>Free Notes</div></Link>
