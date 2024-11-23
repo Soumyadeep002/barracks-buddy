@@ -54,7 +54,7 @@ function App() {
       element: (
         <>
           <Navbar />
-          <div className=' pt-[12%]'>
+          <div className='lg:pt-[8%]  pt-10'>
           <ContactPage ></ContactPage>
           </div>
         </>

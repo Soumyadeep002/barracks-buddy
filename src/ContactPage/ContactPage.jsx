@@ -2,7 +2,7 @@ import React from 'react'
 
 function ContactPage() {
     return (
-        <div className="flex flex-col min-h-screen px-4 sm:px-6 md:px-8 lg:px-[12%] pt-[73%] py-4 sm:py-6">
+        <div className="flex flex-col min-h-screen px-4 sm:px-6 md:px-8 lg:px-[12%]  py-4 sm:py-6">
             <h1 className="text-2xl sm:text-3xl  md:text-4xl lg:text-[50px] font-semibold mb-4 pt-10">Contact Us:</h1>
             <div className="flex-grow bg-lightGrey rounded-2xl sm:rounded-[50px] p-4 sm:p-6 md:p-8 flex flex-col">
                 <div className="flex-grow bg-white rounded-xl sm:rounded-[40px] p-4 sm:p-6 md:p-8 flex flex-col ">
