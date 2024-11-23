@@ -1,43 +1,70 @@
-// import { useState } from 'react'
-import AboutSection from './AboutPage/AboutSection'
-import CoursePage from './AboutPage/CoursePage/CoursePage'
-import './App.css'
-import Form from './components/Form'
-import Navbar from './components/Navbar'
-import HomePage from './HomePage/HomePage'
-import NotesPage from './NotesPage/NotesPage'
+import React from 'react';
+import './App.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import { createBrowserRouter, RouterProvider} from "react-router-dom";
+import Navbar from './components/Navbar';
+import HomePage from './HomePage/HomePage';
+import AboutSection from './AboutPage/AboutSection';
+import NotesPage from './NotesPage/NotesPage';
+import CoursePage from './AboutPage/CoursePage/CoursePage';
+import Form from './components/Form';
+import AuthGuard from './AuthGuard/AuthGuard';
+
 
 function App() {
-  
-  // const router = createBrowserRouter([
-  //   {
-  //     path: '/',
-  //     element: <Navbar><HomePage/></Navbar>
-  //   },
-  //   {
-  //     path: '/about',
-  //     element: <Navbar><AboutSection/></Navbar>
-  //   },
-  //   {
-  //     path: '/free-notes',
-  //     element: <Navbar><NotesPage/></Navbar>
-  //   },
-  // ])
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: (
+        <>
+          <Navbar />
+          <HomePage />
+        </>
+      ),
+    },
+    {
+      path: '/about',
+      element: (
+        <>
+          <Navbar />
+          <AboutSection />
+        </>
+      ),
+    },
+    {
+      path: '/free-notes',
+      element: (
+        <>
+          <Navbar />
+          <NotesPage />
+        </>
+      ),
+    },
+    {
+      path: '/course',
+      element: (
+        <>
+          <Navbar />
+          <AuthGuard element={<CoursePage />} />
+        </>
+      ),
+    },
+    {
+      path: '/form',
+      element: (
+        <>
+          <Navbar />
+          <Form />
+        </>
+      ),
+    },
+    {
+      path: '/login',
+      element: <Form />, // Replace with your Login Component
+    },
+  ]);
 
-  return (
-    <>
-    {/* <Form/> */}
-    {/* <HomePage/> */}
-    {/* <AboutSection/> */}
-    {/* <NotesPage/> */}
-    {/* <CoursePage/> */}
-
-      {/* <RouterProvider router={router}/> */}
-
-    </>
-  )
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
