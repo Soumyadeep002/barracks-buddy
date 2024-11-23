@@ -61,7 +61,7 @@ export default function AuthPage() {
                              )}
                              {selectedOption === "Sign up" && (
                                     <RegisterForm/>
-                                )}
+                            )}
         
 
 
