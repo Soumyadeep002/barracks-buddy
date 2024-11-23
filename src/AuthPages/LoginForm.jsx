@@ -19,9 +19,7 @@ export default function LoginForm() {
                     </div>
 
                     <button type="submit" className="w-full text-white bg-[#2F5325] bg-primary-600 font-medium rounded-3xl text-sm px-5 py-4 text-center">Sign in</button>
-                    <p className="text-sm font-light text-gray-800 ">
-                        Don’t have an account yet? <a href="#" className="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
-                    </p>
+                 
                 </form>
             </div>
         </div>
