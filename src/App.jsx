@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-
 import Navbar from './components/Navbar';
 import HomePage from './HomePage/HomePage';
 import AboutSection from './AboutPage/AboutSection';
@@ -10,7 +9,8 @@ import CoursePage from './AboutPage/CoursePage/CoursePage';
 import Form from './components/Form';
 import AuthGuard from './AuthGuard/AuthGuard';
 import TermsAndConditionsPage from './Terms and conditions/TermsAndConditionsPage';
-
+import ContactPage from './ContactPage/ContactPage';
+import AuthPage from './AuthPages/AuthPage'
 
 
 function App() {
@@ -43,11 +43,22 @@ function App() {
       ),
     },
     {
-      path: '/course',
+      path: '/courses',
       element: (
         <>
           <Navbar />
           <AuthGuard element={<CoursePage />} />
+        </>
+      ),
+    },
+    {
+      path: '/contact',
+      element: (
+        <>
+          <Navbar />
+          <div className='lg:pt-[8%]  pt-10'>
+          <ContactPage ></ContactPage>
+          </div>
         </>
       ),
     },
@@ -62,7 +73,7 @@ function App() {
     },
     {
       path: '/login',
-      element: <Form />, // Replace with your Login Component
+      element:<AuthPage></AuthPage>, 
     },
     {
       path: '/companypolicy',
@@ -77,5 +88,6 @@ function App() {
 
   return <RouterProvider router={router} />;
 }
+
 
 export default App;
