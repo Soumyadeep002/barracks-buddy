@@ -44,17 +44,10 @@ export default function Navbar() {
                         </div>
 
                         <div className="hidden md:flex md:w-5/6 lg:5/6 md:text-lg lg:text-xl mr-14 md:mr-5 lg:mr-5 xl:mr-20 text-white h-full items-center justify-end md:gap-x-5 lg:gap-x-6 xl:gap-x-12">
-
-
-                            {/* <a href='/about' ><div>About Us</div></a>
-                            <a href='/courses' ><div>Courses</div></a>
-                            <a href='/free-notes' ><div>Free Notes</div></a>
-                            <a href='/' ><div>Contact Us</div></a> */}
                             <Link to='/about'><div>About Us</div></Link>
                             <Link to='/courses'><div>Courses</div></Link>
                             <Link to='/free-notes'><div>Free Notes</div></Link>
-                            <Link to='/'><div>Contact Us</div></Link>
-
+                            <Link to='/contact'><div>Contact Us</div></Link>
                             <button type='button' className='bg-white px-7 py-2 text-[#2F5325] rounded-lg font-semibold text-center' onClick={toggleMenu}>Login</button>
                         </div>
 
