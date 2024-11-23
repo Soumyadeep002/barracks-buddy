@@ -2,6 +2,7 @@
 import AboutSection from './AboutPage/AboutSection'
 import CoursePage from './AboutPage/CoursePage/CoursePage'
 import './App.css'
+import AuthPage from './AuthPages/AuthPage'
 import Form from './components/Form'
 import Navbar from './components/Navbar'
 import HomePage from './HomePage/HomePage'
@@ -33,6 +34,7 @@ function App() {
     {/* <AboutSection/> */}
     {/* <NotesPage/> */}
     {/* <CoursePage/> */}
+    <AuthPage/>
 
       {/* <RouterProvider router={router}/> */}
 
