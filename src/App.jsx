@@ -11,6 +11,7 @@ import AuthGuard from './AuthGuard/AuthGuard';
 import TermsAndConditionsPage from './Terms and conditions/TermsAndConditionsPage';
 import ContactPage from './ContactPage/ContactPage';
 import AuthPage from './AuthPages/AuthPage'
+import Footer from './components/footer';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <>
           <Navbar />
           <HomePage />
+          <Footer></Footer>
         </>
       ),
     },

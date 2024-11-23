@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+
 import instagram from '../../public/images/instagram.svg';
 import telegram from '../../public/images/telegram.svg';
 import youtube from '../../public/images/youtube.svg';
