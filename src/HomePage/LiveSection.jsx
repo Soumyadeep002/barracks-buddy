@@ -19,8 +19,8 @@ export default function LiveSection() {
                 <h1 className='bg-yellow-300 px-6 py-2 text-center font-bold text-sm md:text-xl mx-auto rounded-[9rem] w-fit'>
                     Written Training Program
                 </h1>
-                <h2 className='text-xl md:text-2xl lg:text-4xl font-bold mx-auto mt-2 text-center'>NDA | CDS | AFCAT</h2>
-                <h3 className='text-sm md:text-lg xl:text-2xl font-semibold mx-auto mt-4 text-blue-900 text-center'>Batches starting from 20th December 2024.</h3>
+                <h2 className='text-xl sm:text-2xl md:text-2xl lg:text-4xl font-bold mx-auto mt-2 text-center'>NDA | CDS | AFCAT</h2>
+                <h3 className='text-sm sm:text-sm md:text-lg xl:text-2xl font-semibold mx-auto mt-4 text-blue-900 text-center'>Batches starting from 20th December 2024.</h3>
                 <h5 className="font-thin text-xs md:text-sm lg:text-lg mx-auto text-center">To Know more about Written Training Program </h5>
             </div>
         </div>
