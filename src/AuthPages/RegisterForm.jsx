@@ -30,14 +30,14 @@ export default function RegisterForm() {
                     </div>
                     <div>
                         <label for="password" className="block mb-2 text-sm font-medium text-gray-900 ml-3">Password</label>
-                        <input type="password" name="password" id="password" placeholder="••••••••" className="pl-3 bg-gray-50 border-2 border-[#2F5325] border-spacing-2 text-gray-900 rounded-3xl focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " required=""/>
-                        <button onClick={toggleInputType}>
+                        <input type={showPassword} name="password" id="password" placeholder="••••••••" className="pl-3 bg-gray-50 border-2 border-[#2F5325] border-spacing-2 text-gray-900 rounded-3xl focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " required=""/>
+                        <span className='cursor-pointer' onClick={toggleInputType}>
                             {showPassword === "password" ? "Show" : "Hide"} Password
-                        </button>
+                        </span>
                     </div>
                     <div>
                         <label for="confirm_password" className="block mb-2 text-sm font-medium text-gray-900 ml-3">Confirm Password</label>
-                        <input type="password" name="confirm_password" id="confirm_password" placeholder="••••••••" className="pl-3 bg-gray-50 border-2 border-[#2F5325] border-spacing-2 text-gray-900 rounded-3xl focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " required=""/>
+                        <input type={showPassword} name="confirm_password" id="confirm_password" placeholder="••••••••" className="pl-3 bg-gray-50 border-2 border-[#2F5325] border-spacing-2 text-gray-900 rounded-3xl focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " required=""/>
                     </div>
 
                 <button type="submit" className="w-full text-white bg-[#2F5325] bg-primary-600 font-medium rounded-3xl text-sm px-5 py-4 text-center">Sign Up</button>
