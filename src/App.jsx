@@ -9,7 +9,7 @@ import CoursePage from './AboutPage/CoursePage/CoursePage';
 import Form from './components/Form';
 import AuthGuard from './AuthGuard/AuthGuard';
 import ContactPage from './ContactPage/ContactPage';
-
+import AuthPage from './AuthPages/AuthPage'
 
 function App() {
   const router = createBrowserRouter([
@@ -41,7 +41,7 @@ function App() {
       ),
     },
     {
-      path: '/course',
+      path: '/courses',
       element: (
         <>
           <Navbar />
@@ -71,7 +71,7 @@ function App() {
     },
     {
       path: '/login',
-      element: <Form />, 
+      element:<AuthPage></AuthPage>, 
     },
   ]);
 
