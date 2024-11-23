@@ -1,1 +1,1 @@
-const baseUrl = ""
+export const BaseUrl = "https://api.barracksbuddy.com";
