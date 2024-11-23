@@ -75,7 +75,7 @@ export default function Navbar() {
                     <button type="button" className='text-white text-sm' onClick={toggleMobileMenu}>Close</button>
                 </div>
                 <div id="nav-logo" className="w-16 h-16 sm:w-24 sm:h-24 border-4 border-[#2F5325] bg-white rounded-full">
-                    <a href="index.html"><img src={Logo} alt="logo" /></a>
+                    <Link Link to='/'><img src={Logo} alt="logo" /></Link>
                 </div>
 
                 <div className="text-white flex flex-col justify-center items-center gap-12 mt-10 text-lg sm:text-xl">
