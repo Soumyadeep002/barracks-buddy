@@ -36,8 +36,8 @@ function ContactPage() {
                         </div>
                     </div>
                     <div className="mt-6 sm:mt-8 ">
-                        <button className="bg-darkGreen w-full sm:w-2/3 md:w-1/2 lg:w-1/3 rounded-full py-3 flex items-center justify-center transition-colors duration-300 hover:bg-opacity-90 mx-auto">
-                            <span className="text-white font-semibold text-sm sm:text-base">Send Message</span>
+                        <button className=" bg-[#2f5325] w-full sm:w-2/3 md:w-1/2 lg:w-1/3 rounded-full py-3 flex items-center justify-center transition-colors duration-300 hover:bg-opacity-90 mx-auto">
+                            <span className=" text-black font-semibold text-sm sm:text-base">Send Message</span>
                         </button>
                     </div>
                 </div>
