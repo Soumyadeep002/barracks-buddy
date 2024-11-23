@@ -8,8 +8,10 @@ import NotesPage from './NotesPage/NotesPage';
 import CoursePage from './AboutPage/CoursePage/CoursePage';
 import Form from './components/Form';
 import AuthGuard from './AuthGuard/AuthGuard';
+import TermsAndConditionsPage from './Terms and conditions/TermsAndConditionsPage';
 import ContactPage from './ContactPage/ContactPage';
 import AuthPage from './AuthPages/AuthPage'
+
 
 function App() {
   const router = createBrowserRouter([
@@ -72,6 +74,15 @@ function App() {
     {
       path: '/login',
       element:<AuthPage></AuthPage>, 
+    },
+    {
+      path: '/companypolicy',
+      element: (
+        <>
+          <Navbar />
+          <TermsAndConditionsPage/>
+        </>
+      ),
     },
   ]);
 

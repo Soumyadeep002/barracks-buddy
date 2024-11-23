@@ -15,9 +15,9 @@ import 'swiper/css/pagination';
 
 export default function YoutubeSection() {
   return (
-    <section className='py-16 px-5 md:w-[90%] lg:w-[70%] mx-auto'>
+    <section className='py-16 px-5 md:w-[90%] lg:w-[71%] mx-auto'>
         <h1 className='font-bold text-3xl ml-4 mb-5'>Latest on YouTube: </h1>
-        <div className="bg-gray-300 px-5 overflow-hidden mx-auto rounded-[2.5rem] ">
+        <div className="bg-[#D9D9D9] px-5 overflow-hidden mx-auto rounded-[2.5rem] ">
         <Swiper
                             freeMode={true}
                             pagination={{ clickable: true }}
