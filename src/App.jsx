@@ -9,6 +9,8 @@ import NotesPage from './NotesPage/NotesPage';
 import CoursePage from './AboutPage/CoursePage/CoursePage';
 import Form from './components/Form';
 import AuthGuard from './AuthGuard/AuthGuard';
+import TermsAndConditionsPage from './Terms and conditions/TermsAndConditionsPage';
+
 
 
 function App() {
@@ -61,6 +63,15 @@ function App() {
     {
       path: '/login',
       element: <Form />, // Replace with your Login Component
+    },
+    {
+      path: '/companypolicy',
+      element: (
+        <>
+          <Navbar />
+          <TermsAndConditionsPage/>
+        </>
+      ),
     },
   ]);
 
