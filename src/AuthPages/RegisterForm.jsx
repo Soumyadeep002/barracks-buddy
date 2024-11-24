@@ -1,7 +1,17 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { BaseUrl } from "../enviroment/Enviroment";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { faEye } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+
+
+
+
 export default function RegisterForm() {
   const [formData, setFormData] = useState({
     name: "",
@@ -128,11 +138,11 @@ export default function RegisterForm() {
               value={formData.password}
               onChange={handleInputChange}
               placeholder="••••••••"
-              className="pl-3 bg-gray-50 border-2 border-[#2F5325] text-gray-900 rounded-3xl focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+              className="pl-3 bg-gray-50 border-2 -mb-5 border-[#2F5325] text-gray-900 rounded-3xl focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
               required
             />
-            <span className="cursor-pointer" onClick={toggleInputType}>
-              {showPassword === "password" ? "Show" : "Hide"} Password
+            <span className="cursor-pointer  relative left-[21.58rem] -top-4 " onClick={toggleInputType}>
+            {showPassword === "password" ? <FontAwesomeIcon className='text-gray-600' icon={faEye} /> : <FontAwesomeIcon className='text-gray-400' icon={faEyeSlash} />}
             </span>
           </div>
           <div>
@@ -161,6 +171,9 @@ export default function RegisterForm() {
             Sign Up
           </button>
         </form>
+
+        <Link to="/"><div className="mt-4 font-semibold text-[#2F5325]"><FontAwesomeIcon icon={faArrowLeft} className='mr-2 mt-0.5 ' />Back to Home</div></Link>
+
       </div>
     </div>
   );

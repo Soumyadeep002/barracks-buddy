@@ -2,7 +2,12 @@ import React, { useState } from 'react';
 import axios from 'axios'; // Make sure to import axios if not already imported
 import { BaseUrl } from '../enviroment/Enviroment';
 import { useNavigate } from 'react-router-dom';
-import { Navigate } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { faEye } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
@@ -68,8 +73,8 @@ export default function LoginForm() {
             />
           </div>
 
-          <span className='cursor-pointer' onClick={toggleInputType}>
-            {showPassword === "password" ? "Show" : "Hide"} Password
+          <span className='cursor-pointer relative left-[21.58rem] -top-9 ' onClick={toggleInputType}>
+            {showPassword === "password" ? <FontAwesomeIcon className='text-gray-400' icon={faEye} /> : <FontAwesomeIcon className='text-gray-400' icon={faEyeSlash} />}
           </span>
 
           <button
@@ -79,6 +84,7 @@ export default function LoginForm() {
             Sign in
           </button>
         </form>
+        <Link to="/"><div className="mt-4 font-semibold text-[#2F5325]"><FontAwesomeIcon icon={faArrowLeft} className='mr-2 mt-0.5 ' />Back to Home</div></Link>
       </div>
     </div>
   );

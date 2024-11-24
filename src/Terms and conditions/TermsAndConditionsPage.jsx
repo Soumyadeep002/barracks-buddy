@@ -1,10 +1,16 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 const TermsAndConditionsPage = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  
   return (
     <div className="p-4 sm:p-8 lg:p-12 bg-white ">
       <div className=" mx-auto bg-white rounded-lg p-6 sm:p-10">
-        <h1 className="text-[32px] text-darkGreen font-semibold  mb-4 mt-40">
+        <h1 className="text-[32px] text-darkGreen font-semibold  mb-4 mt-16 md:mt-20 lg:mt-28">
           Terms & Conditions
         </h1>
         <p className="text-black font-semibold mb-2">

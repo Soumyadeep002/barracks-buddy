@@ -11,7 +11,7 @@ import AuthGuard from './AuthGuard/AuthGuard';
 import TermsAndConditionsPage from './Terms and conditions/TermsAndConditionsPage';
 import ContactPage from './ContactPage/ContactPage';
 import AuthPage from './AuthPages/AuthPage'
-import Footer from './components/footer';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -32,6 +32,7 @@ function App() {
         <>
           <Navbar />
           <AboutSection />
+          <Footer></Footer>
         </>
       ),
     },
@@ -41,6 +42,7 @@ function App() {
         <>
           <Navbar />
           <NotesPage />
+          <Footer></Footer>
         </>
       ),
     },
@@ -50,6 +52,7 @@ function App() {
         <>
           <Navbar />
           <AuthGuard element={<CoursePage />} />
+          <Footer></Footer>
         </>
       ),
     },
@@ -58,9 +61,8 @@ function App() {
       element: (
         <>
           <Navbar />
-          <div className='lg:pt-[8%]  pt-10'>
           <ContactPage ></ContactPage>
-          </div>
+          <Footer></Footer>
         </>
       ),
     },
@@ -75,7 +77,14 @@ function App() {
     },
     {
       path: '/login',
-      element:<AuthPage></AuthPage>, 
+      element:(
+        <>
+        <AuthPage></AuthPage>, 
+        <Footer></Footer>
+        </>
+      )
+        
+      
     },
     {
       path: '/companypolicy',
@@ -83,6 +92,7 @@ function App() {
         <>
           <Navbar />
           <TermsAndConditionsPage/>
+          <Footer></Footer>
         </>
       ),
     },
