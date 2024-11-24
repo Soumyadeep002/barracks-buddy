@@ -7,7 +7,6 @@ import telegram from '../../public/images/telegram.svg';
 import youtube from '../../public/images/youtube.svg';
 
 
-
 const Footer = () => {
     return (
         <footer className="bg-[#2F5325]">

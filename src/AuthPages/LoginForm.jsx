@@ -9,13 +9,14 @@ import { faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
+
 export default function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState('password');
 
   const navigate = useNavigate();
-  
+
   const toggleInputType = () => {
     setShowPassword((prevType) => (prevType === "password" ? "text" : "password"));
   };
@@ -30,12 +31,12 @@ export default function LoginForm() {
       });
 
       if (response.status == 200) {
-        localStorage.setItem("token" ,response.data.access_token ) 
+        localStorage.setItem("token", response.data.access_token)
         navigate('/');
       }
-     
+
     } catch (error) {
-      console.error("Error logging in", error);
+    
     }
   };
 
