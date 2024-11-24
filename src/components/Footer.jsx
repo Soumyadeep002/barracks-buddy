@@ -26,7 +26,7 @@ const Footer = () => {
                     </div>
 
                     {/* Legal Section */}
-                    <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                    <div className="grid grid-cols-2 gap-12 sm:gap-6 sm:grid-cols-2">
                         {/* Legal Policies */}
                         <div>
                             <h2 className="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Legal Policies</h2>
@@ -51,18 +51,7 @@ const Footer = () => {
                                 </li>
                             </ul>
                         </div>
-                        {/* Transactions */}
-                        <div>
-                            <h2 className="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Transactions</h2>
-                            <ul className="text-white dark:text-white font-medium">
-                                <li className="mb-4">
-                                    <Link to="/companyPolicy" className="hover:underline">Cancellation and Refund Policy</Link>
-                                </li>
-                                <li>
-                                    <Link to="/companyPolicy" className="hover:underline">Shipping and Delivery Policy</Link>
-                                </li>
-                            </ul>
-                        </div>
+                  
                     </div>
                 </div>
 
