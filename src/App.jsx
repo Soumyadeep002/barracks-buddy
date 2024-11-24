@@ -12,7 +12,7 @@ import TermsAndConditionsPage from './Terms and conditions/TermsAndConditionsPag
 import ContactPage from './ContactPage/ContactPage';
 import AuthPage from './AuthPages/AuthPage'
 import Footer from './components/Footer';
-
+import AuthOtp from './AuthPages/AuthOtp';
 
 function App() {
   const router = createBrowserRouter([
@@ -80,6 +80,17 @@ function App() {
       element:(
         <>
         <AuthPage></AuthPage>, 
+        <Footer></Footer>
+        </>
+      )
+        
+      
+    },
+    {
+      path: '/otp',
+      element:(
+        <>
+        <AuthOtp></AuthOtp>, 
         <Footer></Footer>
         </>
       )
