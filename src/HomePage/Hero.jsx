@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from 'react-router-dom'
 import Arrow from '../../public/images/arrow.svg'
 import InstaLogo from '../../public/images/Instagram_logo_2016.svg 1.svg'
 import TelegramLogo from '../../public/images/Telegram_logo.svg 1.svg'
@@ -27,7 +27,7 @@ export default function Hero() {
                 </div>
                 <div className="bg-[#2F5325] gap-3 md:gap-5 flex flex-col xl:flex-row items-start my-auto w-[95%] md:w-[70%] lg:w-[70%] xl:w-[80%] ml-auto py-6 md:py-10 lg:py-12 pl-10 rounded-s-full overflow-hidden">
                     <h1 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl my-auto font-semibold md:ml-8" data-aos="fade-right" data-aos-duration="500" data-aos-delay="200" data-aos-easing="ease-in">Free Notes:</h1>
-                    <a href="https://drive.google.com/drive/folders/1cDv-M8Vv3B4Nyn9wP_67v7OuchoyVusV?usp=drive_link"><img src={Arrow} className=" w-24 sm:w-24 md:w-48 lg:w-56 mx-2 my-auto" alt="arrow" data-aos="fade-right" data-aos-duration="500" data-aos-delay="400"/></a>
+                    <Link to="/free-notes"><img src={Arrow} className=" w-24 sm:w-24 md:w-48 lg:w-56 mx-2 my-auto" alt="arrow" data-aos="fade-right" data-aos-duration="500" data-aos-delay="400"/></Link>
                 </div>
             </div>
         </section>

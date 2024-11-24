@@ -1,5 +1,7 @@
 import React from 'react';
 
+import {Link} from 'react-router-dom';
+
 import instagram from '../../public/images/instagram.svg';
 import telegram from '../../public/images/telegram.svg';
 import youtube from '../../public/images/youtube.svg';
@@ -8,19 +10,19 @@ import youtube from '../../public/images/youtube.svg';
 
 const Footer = () => {
     return (
-        <footer className="bg-[#2F5325] dark:bg-[#ffffff]">
+        <footer className="bg-[#2F5325]">
             <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                 {/* Logo Section */}
-                <div className="md:flex md:justify-between">
+                <div className="md:flex gap-4 md:justify-between">
                     <div className="mb-6 md:mb-0">
                         <button
                             type="button"
-                            className="flex items-center space-x-2 py-2.5 px-5 text-sm font-medium text-[#2F5325] bg-white rounded-lg hover:bg-gray-100 hover:text-[#2F5325] focus:outline-none focus:ring-4 focus:ring-gray-100"
+                            className="flex items-center space-x-2 py-0.5 px-3 text-sm font-medium text-[#2F5325] bg-white rounded-lg hover:bg-gray-100 hover:text-[#2F5325] focus:outline-none focus:ring-4 focus:ring-gray-100"
                         >
-                            <img src="./public/LOGO.png" alt="Company Logo" className="w-5 h-5" />
-                            <a href="/companypolicy" aria-label="Company Policy">
-                                <span>Company</span>
-                            </a>
+                            <img src="./public/LOGO.png" alt="Company Logo" className="w-10 h-10 md:w-14 lg:w-16 md:h-14 lg:h-16" />
+                            <Link to="/" aria-label="Company Policy">
+                                <span className='text-sm md:text-lg'>Barrack's Buddy</span>
+                            </Link>
                         </button>
                     </div>
 
@@ -31,10 +33,10 @@ const Footer = () => {
                             <h2 className="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Legal Policies</h2>
                             <ul className="text-white dark:text-white font-medium">
                                 <li className="mb-4">
-                                    <a href="/companypolicy" className="hover:underline">Terms &amp; Conditions</a>
+                                    <Link to="/companypolicy" className="hover:underline">Terms &amp; Conditions</Link>
                                 </li>
                                 <li>
-                                   <a href="/companypolicy" className="hover:underline">Privacy Policy</a>
+                                   <Link to="/companypolicy" className="hover:underline">Privacy Policy</Link>
                                 </li>
                             </ul>
                         </div>
@@ -43,10 +45,10 @@ const Footer = () => {
                             <h2 className="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Support</h2>
                             <ul className="text-white dark:text-white font-medium">
                                 <li className="mb-4">
-                                    <a href="/companypolicy" className="hover:underline">Contact Us</a>
+                                    <Link to="/companypolicy" className="hover:underline">Contact Us</Link>
                                 </li>
                                 <li>
-                                    <a href="/companypolicy" className="hover:underline">Email</a>
+                                    <Link to="/companypolicy" className="hover:underline">Email</Link>
                                 </li>
                             </ul>
                         </div>
@@ -55,10 +57,10 @@ const Footer = () => {
                             <h2 className="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Transactions</h2>
                             <ul className="text-white dark:text-white font-medium">
                                 <li className="mb-4">
-                                    <a href="/companyPolicy" className="hover:underline">Cancellation and Refund Policy</a>
+                                    <Link to="/companyPolicy" className="hover:underline">Cancellation and Refund Policy</Link>
                                 </li>
                                 <li>
-                                    <a href="/companyPolicy" className="hover:underline">Shipping and Delivery Policy</a>
+                                    <Link to="/companyPolicy" className="hover:underline">Shipping and Delivery Policy</Link>
                                 </li>
                             </ul>
                         </div>

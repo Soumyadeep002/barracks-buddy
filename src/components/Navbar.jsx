@@ -120,14 +120,11 @@ export default function Navbar() {
                             {
                                 isAuthorized && user && (
                                     <div onClick={toggleMenu}>
-                                        <div className="flex gap-2 cursor-pointer">
-                                            {user?.name || 'User'} {/* Safely access name with a fallback */}
+                                        <div className="bg-white flex gap-4 px-7 py-2 text-[#2F5325] rounded-lg font-semibold text-centerr">
+                                            {user?.name.split(' ')[0] || 'User'} {/* Safely access name with a fallback */}
                                             <div>
                                                 <FontAwesomeIcon icon={faChevronDown} />
                                             </div>
-                                        </div>
-                                        <div className="text-end cursor-pointer pr-8">
-                                            +91 <span>{user?.phone || 'Phone Number'}</span> {/* Safely access phone with fallback */}
                                         </div>
                                     </div>
                                 ) 

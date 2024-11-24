@@ -3,6 +3,8 @@ import Logo from '../../public/images/logo/barrackbuddy-logo-1@2x.png'
 import LoginForm from './LoginForm'
 import RegisterForm from './RegisterForm'
 
+import {Link} from 'react-router-dom'
+
 
 
 function Button({ children, onClick, className, type = "button" }) {
@@ -23,6 +25,10 @@ export default function AuthPage() {
 
     const [selectedOption, setSelectedOption] = useState("Login");
 
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
 
     const renderButton = (option, label) => {
         return (
@@ -38,17 +44,12 @@ export default function AuthPage() {
 
   return (
         <>
-            <div className="w-screen py-20">
-                    <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-16">
-                        <a href="#" className="flex items-center mb-1 text-2xl font-semibold">
+            <div className="w-screen">
+                    <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto">
+                        <Link to="/" className="flex items-center mb-1 text-2xl font-semibold">
                             <img className="w-[12rem] h-[12rem]" src={Logo} alt="logo"/>
-                        </a>
+                        </Link>
 
-                        {/* <div className='flex overflow-hidden rounded-3xl bg-gray-200 border-2 border-[#2F5325]'>
-                            <button className='text-white px-5 py-2 bg-[#2F5325]'>Sign In</button>
-                            <button className=' px-5 py-2 '>Sign Up</button>
-                        </div> */}
-                        
 
                                  {/* Toggle Buttons */}
                             <div className="flex rounded-[100px] bg-lightGrey w-[200px] lg:w-[300px] sm:w-[210px] md:w-[250px]">
