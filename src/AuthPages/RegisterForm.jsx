@@ -29,8 +29,6 @@ export default function RegisterForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Validate the form (optional)
     if (formData.password !== formData.confirm_password) {
       alert("Passwords do not match!");
       return;

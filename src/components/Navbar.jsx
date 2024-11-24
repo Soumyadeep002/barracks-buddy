@@ -1,37 +1,101 @@
 import React, { useState, useEffect } from 'react';
 import { FiMenu, FiChevronRight, FiX, } from 'react-icons/fi';
 import Logo from '../../public/logo.png';
-
-import { Link } from 'react-router-dom';
-
+import { BaseUrl } from '../enviroment/Enviroment';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faSquareYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faTelegram } from "@fortawesome/free-brands-svg-icons";
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+
+
+
 
 
 export default function Navbar() {
-
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const navigate = useNavigate();
+    let getUserDetails;
+    const [isAuthorized, setIsAuthorized] = useState(false);
+    // const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [user, setUser] = useState(null);
     const [menuOpen, setMenuOpen] = useState(false);
     const [MobilemenuOpen, setMobileMenuOpen] = useState(false);
+
+
 
     useEffect(() => {
         const loggedInUser = {
             displayName: 'Test User',
             photoURL: '/images/profile.png',
         };
-        setIsLoggedIn(false);
-        setUser(loggedInUser);
+        checkAuthorization();
+
     }, []);
 
+
+    // const logOutCall
+
+    const getUserCall = async () => {
+        const token = localStorage.getItem('token');
+        try {
+
+            const response = await axios.post(
+                `${BaseUrl}/api/me`,
+                {},
+                {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                }
+            );
+            if (response.status === 200) {
+                getUserDetails = response.data
+                setUser(response.data)
+                console.log(response.data);
+
+            }
+
+        } catch (error) {
+
+        }
+    }
+
+    const checkAuthorization = async () => {
+        const token = localStorage.getItem('token');
+        try {
+            const response = await axios.post(
+                `${BaseUrl}/api/authguard`,
+                {},
+                {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                }
+            );
+            if (response.data.code === 200) {
+                console.log("Authorized");
+                setIsAuthorized(true);
+                getUserCall()
+            }else{
+                setIsAuthorized(false);
+            }
+        } catch (error) {
+            console.error("Authorization error:", error);
+        } finally {
+        }
+    };
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!MobilemenuOpen);
     };
+
+    const navigationToLogin = () => {
+        navigate('/login')
+    }
 
     return (
         <>
@@ -47,7 +111,30 @@ export default function Navbar() {
                             <Link to='/courses'><div>Courses</div></Link>
                             <Link to='/free-notes'><div>Free Notes</div></Link>
                             <Link to='/contact'><div>Contact Us</div></Link>
-                            <button type='button' className='bg-white px-7 py-2 text-[#2F5325] rounded-lg font-semibold text-center' onClick={toggleMenu}>Login</button>
+
+                            {
+                                !isAuthorized && <button onClick={navigationToLogin} type='button' className='bg-white px-7 py-2 text-[#2F5325] rounded-lg font-semibold text-center' >Login</button>
+
+                            }
+
+                            {
+                                isAuthorized && user && (
+                                    <div onClick={toggleMenu}>
+                                        <div className="flex gap-2 cursor-pointer">
+                                            {user?.name || 'User'} {/* Safely access name with a fallback */}
+                                            <div>
+                                                <FontAwesomeIcon icon={faChevronDown} />
+                                            </div>
+                                        </div>
+                                        <div className="text-end cursor-pointer pr-8">
+                                            +91 <span>{user?.phone || 'Phone Number'}</span> {/* Safely access phone with fallback */}
+                                        </div>
+                                    </div>
+                                ) 
+                            }
+
+
+
                         </div>
 
                         <div onClick={toggleMobileMenu} id="open-btn" className="mr-10 flex items-end md:hidden flex-col gap-2 my-auto cursor-pointer">
@@ -59,13 +146,16 @@ export default function Navbar() {
 
 
                 </nav>
-                <div className={`hidden md:block absolute left-auto right-7 w-72 bg-white drop-shadow-lg rounded-b-lg ${menuOpen ? '' : 'md:hidden'}`} >
-                    <div className='px-20 py-4 text-center hover:bg-gray-200 cursor-pointer font-semibold text-xl border-b-2 border-[#1A3718]'>Profile</div>
-                    <div className='px-20 py-4 text-center hover:bg-gray-200 cursor-pointer font-semibold text-xl border-b-2 border-[#1A3718]'>Purchase</div>
-                    <div className='px-20 py-4 text-center'>
-                        <button type='button' className='bg-[#1A3718] text-white px-7 py-2 rounded-lg font-semibold'>Logout</button>
+                {
+                    isAuthorized && <div className={`hidden md:block absolute left-auto right-7 w-72 bg-white drop-shadow-lg rounded-b-lg ${menuOpen ? '' : 'md:hidden'}`} >
+                        <div className='px-20 py-4 text-center hover:bg-gray-200 cursor-pointer font-semibold text-xl border-b-2 border-[#1A3718]'>Profile</div>
+                        <div className='px-20 py-4 text-center hover:bg-gray-200 cursor-pointer font-semibold text-xl border-b-2 border-[#1A3718]'>Purchase</div>
+                        <div className='px-20 py-4 text-center'>
+                            <button type='button' className='bg-[#1A3718] text-white px-7 py-2 rounded-lg font-semibold'>Logout</button>
+                        </div>
                     </div>
-                </div>
+                }
+
             </header>
 
 
@@ -75,7 +165,7 @@ export default function Navbar() {
                     <button type="button" className='text-white text-sm' onClick={toggleMobileMenu}>Close</button>
                 </div>
                 <div id="nav-logo" className="w-16 h-16 sm:w-24 sm:h-24 border-4 border-[#2F5325] bg-white rounded-full">
-                    <Link Link to='/'><img src={Logo} alt="logo" /></Link>
+                    <Link  to='/'><img src={Logo} alt="logo" /></Link>
                 </div>
 
                 <div className="text-white flex flex-col justify-center items-center gap-12 mt-10 text-lg sm:text-xl">
@@ -83,7 +173,9 @@ export default function Navbar() {
                     <a href='/courses'><div>Courses</div></a>
                     <a href='/free-notes'><div>Free Notes</div></a>
                     <a href='/'><div>Contact Us</div></a>
-                    <button type='button' className='bg-white px-7 py-2 text-[#2F5325] rounded-[0.5rem] font-semibold text-center'>Login</button>
+                    {
+                        !isAuthorized && <button type='button' className='bg-white px-7 py-2 text-[#2F5325] rounded-[0.5rem] font-semibold text-center'>Login</button>
+                    }
                 </div>
 
                 <div id="secondary-footer" className="pb-5 absolute text-white top-auto bottom-0">
