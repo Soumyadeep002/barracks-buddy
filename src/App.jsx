@@ -12,6 +12,7 @@ import TermsAndConditionsPage from './Terms and conditions/TermsAndConditionsPag
 import ContactPage from './ContactPage/ContactPage';
 import AuthPage from './AuthPages/AuthPage'
 import Footer from './components/Footer';
+import CoursePayment from './AboutPage/CoursePage/CoursePayment';
 
 
 function App() {
@@ -72,6 +73,16 @@ function App() {
         <>
           <Navbar />
           <Form />
+        </>
+      ),
+    },
+    {
+      path: '/payment',
+      element: (
+        <>
+          <Navbar />
+          <CoursePayment/>
+          <Footer></Footer>
         </>
       ),
     },
