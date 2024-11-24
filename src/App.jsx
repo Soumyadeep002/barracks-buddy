@@ -8,7 +8,10 @@ import NotesPage from './NotesPage/NotesPage';
 import CoursePage from './AboutPage/CoursePage/CoursePage';
 import Form from './components/Form';
 import AuthGuard from './AuthGuard/AuthGuard';
+import TermsAndConditionsPage from './Terms and conditions/TermsAndConditionsPage';
 import ContactPage from './ContactPage/ContactPage';
+import AuthPage from './AuthPages/AuthPage'
+import Footer from './components/footer';
 
 
 function App() {
@@ -19,6 +22,7 @@ function App() {
         <>
           <Navbar />
           <HomePage />
+          <Footer></Footer>
         </>
       ),
     },
@@ -41,7 +45,7 @@ function App() {
       ),
     },
     {
-      path: '/course',
+      path: '/courses',
       element: (
         <>
           <Navbar />
@@ -71,7 +75,16 @@ function App() {
     },
     {
       path: '/login',
-      element: <Form />, // Replace with your Login Component
+      element:<AuthPage></AuthPage>, 
+    },
+    {
+      path: '/companypolicy',
+      element: (
+        <>
+          <Navbar />
+          <TermsAndConditionsPage/>
+        </>
+      ),
     },
   ]);
 

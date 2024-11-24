@@ -24,6 +24,7 @@ import Member12 from '../../public/images/Members/Soumyadeep Ganguly.png'
 import Member13 from '../../public/images/Members/Vaibhav Panwar.png'
 import Member14 from '../../public/images/Members/Yash Maheshwari.png'
 import Member15 from '../../public/images/Members/Yogita Chaudhary.png'
+import Member16 from '../../public/images/Members/Sugata Ray Chaudhary.png'
 
 export default function Team() {
   return (
@@ -102,6 +103,9 @@ export default function Team() {
                         </SwiperSlide>
                         <SwiperSlide>
                             <img className="mx-auto" src={Member15} alt="" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img className="mx-auto" src={Member16} alt="" />
                         </SwiperSlide>
                     </Swiper>
                 </div>
