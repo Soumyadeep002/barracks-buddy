@@ -53,7 +53,8 @@ function App() {
       element: (
         <>
           <Navbar />
-          <AuthGuard element={<CoursePage />} />
+          {/* <AuthGuard element={<CoursePage />} /> */}
+          <CoursePage />
           <Footer></Footer>
         </>
       ),

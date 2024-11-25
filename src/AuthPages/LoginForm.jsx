@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios'; // Make sure to import axios if not already imported
-import { BaseUrl } from '../enviroment/Enviroment';
+import { BaseUrl } from '../Enviroment/Enviroment';
 import { useNavigate } from 'react-router-dom';
 import { Link, Navigate } from 'react-router-dom';
 
@@ -61,23 +61,26 @@ export default function LoginForm() {
             />
           </div>
           <div>
-            <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 ml-3">Password</label>
-            <input
+            <label htmlFor="password" className="block  mb-2 text-sm font-medium text-gray-900 ml-3">Password</label>
+            <input 
               type={showPassword}
               name="password"
               id="password"
               placeholder="••••••••"
-              className="pl-3 bg-gray-50 border-2 border-[#2F5325] border-spacing-2 text-gray-900 rounded-3xl focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+              className="pl-3 mb-3 bg-gray-50 border-2 border-[#2F5325] border-spacing-2 text-gray-900 rounded-3xl focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
             />
           </div>
 
-          <span className='cursor-pointer relative left-[21.58rem] -top-9 ' onClick={toggleInputType}>
+          <span className='cursor-pointer relative left-[21.58rem] -top-12' onClick={toggleInputType}>
+
             {showPassword === "password" ? <FontAwesomeIcon className='text-gray-400' icon={faEye} /> : <FontAwesomeIcon className='text-gray-400' icon={faEyeSlash} />}
           </span>
-
+          <span className=' cursor-pointer  mt-2'>
+          Forgot Password ?
+           </span>
           <button
             type="submit"
             className="w-full text-white bg-[#2F5325] bg-primary-600 font-medium rounded-3xl text-sm px-5 py-4 text-center"

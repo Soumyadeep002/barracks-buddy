@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { BaseUrl } from "../enviroment/Enviroment";
+import { BaseUrl } from "../Enviroment/Enviroment";
 import { Link, useNavigate } from 'react-router-dom';
 
 
