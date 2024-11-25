@@ -15,6 +15,7 @@ import Footer from './components/Footer';
 
 import CoursePayment from './AboutPage/CoursePage/CoursePayment';
 import AuthOtp from './AuthPages/AuthOtp';
+import CourseDetailsPage from './AboutPage/CoursePage/CourseDetailsPage';
 
 function App() {
   const router = createBrowserRouter([
@@ -116,6 +117,16 @@ function App() {
         <>
           <Navbar />
           <TermsAndConditionsPage/>
+          <Footer></Footer>
+        </>
+      ),
+    },
+    {
+      path: '/coursedetails',
+      element: (
+        <>
+          <Navbar />
+          <CourseDetailsPage/>
           <Footer></Footer>
         </>
       ),
