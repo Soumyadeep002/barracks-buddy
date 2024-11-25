@@ -55,7 +55,8 @@ export default function RegisterForm() {
     try {
       const response = await axios.post(`${BaseUrl}/api/auth/register`, payload);
       if (response.status === 200) {
-        navigate('/');
+        navigate('/otp');
+        localStorage.setItem("gmail" , formData.email)
         localStorage.setItem("token" , response.data.access_token)
       }
     } catch (error) {
