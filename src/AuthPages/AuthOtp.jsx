@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import axios from "axios"; 
 import Logo from "../../public/images/logo/barrackbuddy-logo-1@2x.png";
 import { Link, useNavigate } from "react-router-dom";
-import { BaseUrl } from "../enviroment/Enviroment"; 
+import { BaseUrl } from "../Enviroment/Enviroment"; 
 export default function AuthOtp() {
   const [otp, setOtp] = useState(Array(4).fill(""));
   const [loading, setLoading] = useState(false); 

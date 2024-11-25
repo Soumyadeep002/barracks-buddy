@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FiMenu, FiChevronRight, FiX, } from 'react-icons/fi';
 import Logo from '../../public/logo.png';
-import { BaseUrl } from '../enviroment/Enviroment';
+import { BaseUrl } from '../Enviroment/Enviroment';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -76,7 +76,7 @@ export default function Navbar() {
             if (response.status === 200) {
                 getUserDetails = response.data
                 setUser(response.data)
-                console.log(response.data);
+                // console.log(response.data);
 
             }
 
@@ -98,7 +98,7 @@ export default function Navbar() {
                 }
             );
             if (response.data.code === 200) {
-                console.log("Authorized");
+                // console.log("Authorized");
                 setIsAuthorized(true);
                 getUserCall()
             }else{
