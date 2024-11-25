@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import axios from "axios";
-import { BaseUrl } from "../enviroment/Enviroment";
+import { BaseUrl } from "../Enviroment/Enviroment";
 
 const AuthGuard = ({ element }) => {
   const [isLoading, setIsLoading] = useState(true);
