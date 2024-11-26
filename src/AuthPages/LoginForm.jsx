@@ -78,7 +78,7 @@ export default function LoginForm() {
 
             {showPassword === "password" ? <FontAwesomeIcon className='text-gray-400' icon={faEye} /> : <FontAwesomeIcon className='text-gray-400' icon={faEyeSlash} />}
           </span>
-          <span className=' cursor-pointer  mt-2'>
+          <span onClick={() => (navigate('/resetpassword'))} className=' cursor-pointer  mt-2'>
           Forgot Password ?
            </span>
           <button
