@@ -1,11 +1,14 @@
 import React from 'react'
-import Img from '../../../public/images/thumbnails/tb32.webp'
-import fac2 from '../../../public/images/coursepage/exam.png'
-import fac3 from '../../../public/images/coursepage/NOTES.svg'
-import fac4 from '../../../public/images/coursepage/PERSONALITY DEVELOPMENT.svg'
-import fac5 from '../../../public/images/coursepage/PYQ.svg'
-import fac1 from '../../../public/images/coursepage/RECORDING.svg'
-import fac6 from '../../../public/images/coursepage/STRUCTURED SCHEDULE.svg'
+import Img from '../../assets/images/thumbnails/tb32.webp'
+import fac2 from '../../assets/images/coursepage/exam.png'
+import fac3 from '../../assets/images/coursepage/NOTES.svg'
+import fac4 from '../../assets/images/coursepage/PERSONALITY DEVELOPMENT.svg'
+import fac5 from '../../assets/images/coursepage/PYQ.svg'
+import fac1 from '../../assets/images/coursepage/RECORDING.svg'
+import fac6 from '../../assets/images/coursepage/STRUCTURED SCHEDULE.svg'
+
+
+
 
 export default function CourseDetailsPage() {
   return (

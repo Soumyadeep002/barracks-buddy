@@ -1,9 +1,9 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import Arrow from '../../public/images/arrow.svg'
-import InstaLogo from '../../public/images/Instagram_logo_2016.svg 1.svg'
-import TelegramLogo from '../../public/images/Telegram_logo.svg 1.svg'
-import HeroImage from '../../public/images/photo-rahul-sharma-notes-1@2x.png'
+import Arrow from '../assets/images/arrow.svg'
+import InstaLogo from '../assets/images/Instagram_logo_2016.svg 1.svg'
+import TelegramLogo from '../assets/images/Telegram_logo.svg 1.svg'
+import HeroImage from '../assets/images/photo-rahul-sharma-notes-1@2x.png'
 
 export default function Hero() {
   return (

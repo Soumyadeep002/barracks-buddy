@@ -1,5 +1,4 @@
 import React, {useEffect} from 'react'
-import image from '../../public/images/thumbnails/tb60.webp'
 import ImageSlideer from './ImageSlideer'
 
 export default function AboutSection() {

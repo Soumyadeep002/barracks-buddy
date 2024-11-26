@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import Hero from '../../public/images/main.png';
-import Play from '../../public/images/Play Vector.svg';
+import Hero from '../assets/images/main.png';
+import Play from '../assets/images/Play Vector.svg';
 
 
 

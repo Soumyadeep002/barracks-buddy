@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
-import Thumb from '../../../public/images/thumbnails/tb27.webp'
+import Thumb from '../../assets/images/thumbnails/tb27.webp'
 import { BaseUrl } from '../../Enviroment/Enviroment';
+
 
 
 
