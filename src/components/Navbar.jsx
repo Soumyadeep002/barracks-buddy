@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FiMenu, FiChevronRight, FiX, } from 'react-icons/fi';
 import Logo from '../../public/logo.png';
-import { BaseUrl } from '../enviroment/Enviroment';
+import { BaseUrl } from '../Enviroment/Enviroment';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -35,7 +35,30 @@ export default function Navbar() {
     }, []);
 
 
-    // const logOutCall
+    const logOutCall = async () => {
+        const token = localStorage.getItem('token');
+        try {
+
+            const response = await axios.post(
+                `${BaseUrl}/api/logout`,
+                {},
+                {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                }
+            );
+            if (response.status === 200) {
+                localStorage.removeItem("token")
+                navigate("/")
+                checkAuthorization()
+                setIsAuthorized(false)
+            }
+
+        } catch (error) {
+
+        }
+    }
 
     const getUserCall = async () => {
         const token = localStorage.getItem('token');
@@ -53,7 +76,7 @@ export default function Navbar() {
             if (response.status === 200) {
                 getUserDetails = response.data
                 setUser(response.data)
-                console.log(response.data);
+                // console.log(response.data);
 
             }
 
@@ -75,7 +98,7 @@ export default function Navbar() {
                 }
             );
             if (response.data.code === 200) {
-                console.log("Authorized");
+                // console.log("Authorized");
                 setIsAuthorized(true);
                 getUserCall()
             }else{
@@ -148,11 +171,10 @@ export default function Navbar() {
                         <div className='px-20 py-4 text-center hover:bg-gray-200 cursor-pointer font-semibold text-xl border-b-2 border-[#1A3718]'>Profile</div>
                         <div className='px-20 py-4 text-center hover:bg-gray-200 cursor-pointer font-semibold text-xl border-b-2 border-[#1A3718]'>Purchase</div>
                         <div className='px-20 py-4 text-center'>
-                            <button type='button' className='bg-[#1A3718] text-white px-7 py-2 rounded-lg font-semibold'>Logout</button>
+                            <button onClick={logOutCall} type='button' className='bg-[#1A3718] text-white px-7 py-2 rounded-lg font-semibold'>Logout</button>
                         </div>
                     </div>
                 }
-
             </header>
 
 

@@ -5,8 +5,7 @@ import {Link} from 'react-router-dom';
 import instagram from '../../public/images/instagram.svg';
 import telegram from '../../public/images/telegram.svg';
 import youtube from '../../public/images/youtube.svg';
-
-
+import Logo from '../../public/images/logo/barrackbuddy-logo-1@2x.png'
 
 const Footer = () => {
     return (
@@ -19,7 +18,7 @@ const Footer = () => {
                             type="button"
                             className="flex items-center space-x-2 py-0.5 px-3 text-sm font-medium text-[#2F5325] bg-white rounded-lg hover:bg-gray-100 hover:text-[#2F5325] focus:outline-none focus:ring-4 focus:ring-gray-100"
                         >
-                            <img src="./public/LOGO.png" alt="Company Logo" className="w-10 h-10 md:w-14 lg:w-16 md:h-14 lg:h-16" />
+                            <img src={Logo} alt="Company Logo" className="w-10 h-10 md:w-14 lg:w-16 md:h-14 lg:h-16" />
                             <Link to="/" aria-label="Company Policy">
                                 <span className='text-sm md:text-lg'>Barrack's Buddy</span>
                             </Link>

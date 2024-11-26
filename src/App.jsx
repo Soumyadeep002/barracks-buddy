@@ -12,8 +12,9 @@ import TermsAndConditionsPage from './Terms and conditions/TermsAndConditionsPag
 import ContactPage from './ContactPage/ContactPage';
 import AuthPage from './AuthPages/AuthPage'
 import Footer from './components/Footer';
-import CoursePayment from './AboutPage/CoursePage/CoursePayment';
 
+import CoursePayment from './AboutPage/CoursePage/CoursePayment';
+import AuthOtp from './AuthPages/AuthOtp';
 
 function App() {
   const router = createBrowserRouter([
@@ -52,7 +53,8 @@ function App() {
       element: (
         <>
           <Navbar />
-          <AuthGuard element={<CoursePage />} />
+          {/* <AuthGuard element={<CoursePage />} /> */}
+          <CoursePage />
           <Footer></Footer>
         </>
       ),
@@ -91,6 +93,17 @@ function App() {
       element:(
         <>
         <AuthPage></AuthPage>, 
+        <Footer></Footer>
+        </>
+      )
+        
+      
+    },
+    {
+      path: '/otp',
+      element:(
+        <>
+        <AuthOtp></AuthOtp>, 
         <Footer></Footer>
         </>
       )
