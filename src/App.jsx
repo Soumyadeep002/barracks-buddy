@@ -12,8 +12,10 @@ import TermsAndConditionsPage from './Terms and conditions/TermsAndConditionsPag
 import ContactPage from './ContactPage/ContactPage';
 import AuthPage from './AuthPages/AuthPage'
 import Footer from './components/Footer';
-import CoursePayment from './AboutPage/CoursePage/CoursePayment';
 
+import CoursePayment from './AboutPage/CoursePage/CoursePayment';
+import AuthOtp from './AuthPages/AuthOtp';
+import ForgetPasswordPage from './AuthPages/ForgetPasswordPage';
 
 function App() {
   const router = createBrowserRouter([
@@ -52,7 +54,8 @@ function App() {
       element: (
         <>
           <Navbar />
-          <AuthGuard element={<CoursePage />} />
+          {/* <AuthGuard element={<CoursePage />} /> */}
+          <CoursePage />
           <Footer></Footer>
         </>
       ),
@@ -94,6 +97,24 @@ function App() {
         <Footer></Footer>
         </>
       )
+    },
+    {
+      path: '/resetpassword',
+      element:(
+        <>
+        <ForgetPasswordPage></ForgetPasswordPage> 
+        <Footer></Footer>
+        </>
+      )
+    },
+    {
+      path: '/otp',
+      element:(
+        <>
+        <AuthOtp></AuthOtp>, 
+        <Footer></Footer>
+        </>
+      )
         
       
     },
@@ -103,6 +124,17 @@ function App() {
         <>
           <Navbar />
           <TermsAndConditionsPage/>
+          <Footer></Footer>
+        </>
+      ),
+    },
+    {
+      path: '/courses/:id',
+      element: (
+        <>
+          <Navbar />
+          <AuthGuard element={<CoursePayment></CoursePayment>} />
+          
           <Footer></Footer>
         </>
       ),

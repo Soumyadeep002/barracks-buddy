@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { BaseUrl } from "../enviroment/Enviroment";
+import { BaseUrl } from "../Enviroment/Enviroment";
 import { Link, useNavigate } from 'react-router-dom';
 
 
@@ -55,7 +55,8 @@ export default function RegisterForm() {
     try {
       const response = await axios.post(`${BaseUrl}/api/auth/register`, payload);
       if (response.status === 200) {
-        navigate('/');
+        navigate('/otp');
+        localStorage.setItem("gmail" , formData.email)
         localStorage.setItem("token" , response.data.access_token)
       }
     } catch (error) {
