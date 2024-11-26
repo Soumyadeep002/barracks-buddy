@@ -107,7 +107,7 @@ export default function Navbar() {
                 setIsAuthorized(false);
             }
         } catch (error) {
-            console.error("Authorization error:", error);
+            // console.error("Authorization error:", error);
         } finally {
         }
     };

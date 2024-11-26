@@ -3,9 +3,11 @@ import CourseCard from './CourseCard';
 import axios from 'axios'; // Import axios
 import { BaseUrl } from '../../Enviroment/Enviroment';
 import Thumb from '../../assets/images/thumbnails/tb27.webp'
+import { Link, Navigate  , useNavigate} from 'react-router-dom';
+
 export default function CoursePage() {
   const [courses, setCourses] = useState([]);
-
+  const navigate = useNavigate();
   useEffect(() => {
     window.scrollTo(0, 0);
     getCourses();
@@ -16,10 +18,18 @@ export default function CoursePage() {
       const response = await axios.get(`${BaseUrl}/api/all-courses`);
       console.log(response.data.data);
       setCourses(response.data.data)
+      navigate()
     } catch (error) {
       console.error("Error fetching courses:", error);
     }
   };
+
+  const redirectPayment = (id) => {
+    navigate(`/courses/${id}`); 
+    console.log(id
+    );
+    
+  }
 
   return (
     <div className=' py-20 md:py-36 lg:py-44 px-5'>
@@ -37,7 +47,7 @@ export default function CoursePage() {
               <p className="text-sm font-light text-gray-500">Start Date: {course.start}</p>
             </div>
             <div className="flex flex-col space-y-2 w-full">
-              <button className="bg-[#38612d] w-full font-semibold rounded-lg py-3 text-sm md:text-base lg:text-lg text-white flex items-center justify-center hover:bg-[#1f3618] transition duration-200">
+              <button onClick={() => redirectPayment(course.id)} className="bg-[#38612d] w-full font-semibold rounded-lg py-3 text-sm md:text-base lg:text-lg text-white flex items-center justify-center hover:bg-[#1f3618] transition duration-200">
                 Explore Now
               </button>
             </div>
