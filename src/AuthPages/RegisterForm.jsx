@@ -143,7 +143,7 @@ export default function RegisterForm() {
               required
             />
             <span className="cursor-pointer  relative left-[21.58rem] -top-4 " onClick={toggleInputType}>
-            {showPassword === "password" ? <FontAwesomeIcon className='text-gray-600' icon={faEye} /> : <FontAwesomeIcon className='text-gray-400' icon={faEyeSlash} />}
+            {showPassword === "password" ? <FontAwesomeIcon className='text-gray-600' icon={faEye} /> : <FontAwesomeIcon className='text-gray-600' icon={faEyeSlash} />}
             </span>
           </div>
           <div>

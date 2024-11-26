@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Logo from '../../public/images/logo/barrackbuddy-logo-1@2x.png'
+import Logo from '../assets/images/logo/barrackbuddy-logo-1@2x.png'
 import LoginForm from './LoginForm'
 import RegisterForm from './RegisterForm'
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CourseCard from './CourseCard';
 import axios from 'axios'; // Import axios
 import { BaseUrl } from '../../Enviroment/Enviroment';
-import Thumb from '../../../public/images/thumbnails/tb27.webp'
+import Thumb from '../../assets/images/thumbnails/tb27.webp'
 import { Link, Navigate  , useNavigate} from 'react-router-dom';
 
 export default function CoursePage() {

@@ -2,11 +2,6 @@ import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 
-import img1 from '../../public/images/thumbnails/tb27.webp'
-import img2 from '../../public/images/thumbnails/tb28.webp'
-import img3 from '../../public/images/thumbnails/tb32.webp'
-import img4 from '../../public/images/thumbnails/tb33.webp'
-import img5 from '../../public/images/thumbnails/tb34.webp'
 
 // Import Swiper styles
 import 'swiper/css';

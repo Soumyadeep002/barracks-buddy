@@ -6,7 +6,6 @@ import HomePage from './HomePage/HomePage';
 import AboutSection from './AboutPage/AboutSection';
 import NotesPage from './NotesPage/NotesPage';
 import CoursePage from './AboutPage/CoursePage/CoursePage';
-import Form from './components/Form';
 import AuthGuard from './AuthGuard/AuthGuard';
 import TermsAndConditionsPage from './Terms and conditions/TermsAndConditionsPage';
 import ContactPage from './ContactPage/ContactPage';
@@ -15,7 +14,10 @@ import Footer from './components/Footer';
 
 import CoursePayment from './AboutPage/CoursePage/CoursePayment';
 import AuthOtp from './AuthPages/AuthOtp';
+import CourseDetailsPage from './AboutPage/CoursePage/CourseDetailsPage';
+import PageLoader from './components/PageLoader';
 import ForgetPasswordPage from './AuthPages/ForgetPasswordPage';
+
 
 function App() {
   const router = createBrowserRouter([
@@ -71,15 +73,6 @@ function App() {
       ),
     },
     {
-      path: '/form',
-      element: (
-        <>
-          <Navbar />
-          <Form />
-        </>
-      ),
-    },
-    {
       path: '/payment',
       element: (
         <>
@@ -115,8 +108,6 @@ function App() {
         <Footer></Footer>
         </>
       )
-        
-      
     },
     {
       path: '/companypolicy',
@@ -129,6 +120,26 @@ function App() {
       ),
     },
     {
+
+      path: '/preloader',
+      element: (
+        <>
+          <Navbar />
+          <PageLoader/>
+          <Footer></Footer>
+        </>
+      ),
+    },
+    {
+      path: '/coursedetails',
+      element: (
+        <>
+          <Navbar />
+          <CourseDetailsPage/>
+          <Footer></Footer>
+        </>)},
+
+       {
       path: '/courses/:id',
       element: (
         <>

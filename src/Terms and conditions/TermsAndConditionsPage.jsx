@@ -8,7 +8,7 @@ const TermsAndConditionsPage = () => {
 
   
   return (
-    <div className="p-4 sm:p-8 lg:p-12 bg-white ">
+    <div className="w-full md:w-[90%] lg:w-[70%] mx-auto px-5 text-justify bg-white ">
       <div className=" mx-auto bg-white rounded-lg p-6 sm:p-10">
         <h1 className="text-[32px] text-darkGreen font-semibold  mb-4 mt-16 md:mt-20 lg:mt-28">
           Terms & Conditions
@@ -90,7 +90,7 @@ const TermsAndConditionsPage = () => {
           </ul>
         </section>
 
-        <section className="mb-8">
+        {/* <section className="mb-8">
           <h1 className=" font-semibold text-[32px] text-darkGreen mb-4">
             Cancellation & Refund Policy
           </h1>
@@ -138,7 +138,7 @@ const TermsAndConditionsPage = () => {
               days for the refund to be processed to the end customer.
             </li>
           </ul>
-        </section>
+        </section> */}
 
         <section className="mb-8">
           <h2 className="text-[32px] text-darkGreen font-semibold  mb-2">
@@ -255,7 +255,7 @@ const TermsAndConditionsPage = () => {
           </p>
         </section>
 
-        <section className="mb-8">
+        {/* <section className="mb-8">
           <h2 className="text-[32px] text-darkGreen font-semibold mb-2">
             Shipping & Delivery Policy
           </h2>
@@ -264,7 +264,7 @@ const TermsAndConditionsPage = () => {
             <br />
             Shipping is not applicable for business.
           </p>
-        </section>
+        </section> */}
 
         <section>
           <h2 className="text-[32px] text-darkGreen font-semibold mb-2">

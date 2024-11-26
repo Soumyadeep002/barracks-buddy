@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FiMenu, FiChevronRight, FiX, } from 'react-icons/fi';
-import Logo from '../../public/logo.png';
+import Logo from '../assets/images/logo.png';
 import { BaseUrl } from '../Enviroment/Enviroment';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios";
@@ -9,6 +9,8 @@ import { faSquareInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faSquareYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faTelegram } from "@fortawesome/free-brands-svg-icons";
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+
 
 
 
@@ -178,24 +180,46 @@ export default function Navbar() {
             </header>
 
 
-            <div id="mob-nav" className={`w-screen h-screen bg-[#1A3718] flex flex-col items-center  ${MobilemenuOpen ? '' : '-translate-x-[50rem]'} transition-transform duration-500 drop-shadow-2xl  md:hidden gap-5 fixed z-[1001] `}>
+            <div id="mob-nav" className={`w-screen overflow-auto h-screen bg-[#1A3718] flex flex-col items-center  ${MobilemenuOpen ? '' : '-translate-x-[50rem]'} transition-transform duration-500 drop-shadow-2xl  md:hidden gap-5 fixed z-[1001] `}>
                 <div id="close-btn" className="text-white ml-auto mr-12 mt-4 text-5xl cursor-pointer">
                     {/* <i className="fa-solid fa-angle-left"></i> */}
-                    <button type="button" className='text-white text-sm' onClick={toggleMobileMenu}>Close</button>
+                    <button type="button" className='text-white text-sm' onClick={toggleMobileMenu}><FontAwesomeIcon className='text-4xl' icon={faChevronLeft} /></button>
                 </div>
-                <div id="nav-logo" className="w-16 h-16 sm:w-24 sm:h-24 border-4 border-[#2F5325] bg-white rounded-full">
-                    <Link  to='/'><img src={Logo} alt="logo" /></Link>
+                <div id="nav-logo" className="w-20 h-20 sm:w-24 sm:h-24 border-4 border-[#2F5325] bg-white rounded-full">
+                    <Link onClick={toggleMobileMenu} to='/'><img src={Logo} alt="logo" /></Link>
                 </div>
 
-                <div className="text-white flex flex-col justify-center items-center gap-12 mt-10 text-lg sm:text-xl">
-                    <a href='/about'><div>About Us</div></a>
-                    <a href='/courses'><div>Courses</div></a>
-                    <a href='/free-notes'><div>Free Notes</div></a>
-                    <a href='/'><div>Contact Us</div></a>
+                <div className="text-white flex flex-col justify-center items-center gap-9 mt-10 text-lg sm:text-xl">
+                    <Link to='/' onClick={toggleMobileMenu}><div>Home</div></Link>
+                    <Link to='/about' onClick={toggleMobileMenu}><div>About Us</div></Link>
+                    <Link to='/courses' onClick={toggleMobileMenu}><div>Courses</div></Link>
+                    <Link to='/free-notes' onClick={toggleMobileMenu}><div>Free Notes</div></Link>
+                    <Link to='/contact' onClick={toggleMobileMenu}><div>Contact Us</div></Link>
                     {
-                        !isAuthorized && <button type='button' className='bg-white px-7 py-2 text-[#2F5325] rounded-[0.5rem] font-semibold text-center'>Login</button>
+                        !isAuthorized && <button type='button' onClick={navigationToLogin} className='bg-white px-7 py-2 text-[#2F5325] rounded-[0.5rem] font-semibold text-center'>Login</button>
                     }
+                    {
+                            isAuthorized && user && (
+                                <div onClick={toggleMenu}>
+                                    <div className="bg-white flex gap-4 px-7 py-2 text-[#2F5325] rounded-lg font-semibold text-centerr">
+                                        {user?.name.split(' ')[0] || 'User'} {/* Safely access name with a fallback */}
+                                        <div>
+                                            <FontAwesomeIcon icon={faChevronDown} />
+                                        </div>
+                                    </div>
+                                </div>
+                            ) 
+                        }
                 </div>
+                    {isAuthorized && <div className={`${menuOpen ? 'block' : 'hidden'} z-[99] absolute translate-y-[37rem] bg-white drop-shadow-lg rounded-lg md:hidden`} >
+                        <div className='px-10 py-2 text-center hover:bg-gray-200 cursor-pointer font-semibold text-xl border-b-2 border-[#1A3718]'>Profile</div>
+                        <div className='px-10 py-2 text-center hover:bg-gray-200 cursor-pointer font-semibold text-xl border-b-2 border-[#1A3718]'>Purchase</div>
+                        <div className='px-10 py-2 text-center'>
+                            <button onClick={logOutCall} type='button' className='bg-[#1A3718] text-white px-7 py-2 rounded-lg font-semibold'>Logout</button>
+                        </div>
+                    </div>
+                    }
+
 
                 <div id="secondary-footer" className="pb-5 absolute text-white top-auto bottom-0">
                     <div className="flex flex-col justify-center items-center gap-7">

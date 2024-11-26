@@ -2,10 +2,10 @@ import React from 'react';
 
 import {Link} from 'react-router-dom';
 
-import instagram from '../../public/images/instagram.svg';
-import telegram from '../../public/images/telegram.svg';
-import youtube from '../../public/images/youtube.svg';
-import Logo from '../../public/images/logo/barrackbuddy-logo-1@2x.png'
+import instagram from '../assets/images/instagram.svg';
+import telegram from '../assets/images/telegram.svg';
+import youtube from '../assets/images/youtube.svg';
+import Logo from '../assets/images/logo/barrackbuddy-logo-1@2x.png'
 
 const Footer = () => {
     return (
@@ -26,12 +26,12 @@ const Footer = () => {
                     </div>
 
                     {/* Legal Section */}
-                    <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                    <div className="grid grid-cols-2 gap-12 sm:gap-6 sm:grid-cols-2">
                         {/* Legal Policies */}
                         <div>
-                            <h2 className="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Legal Policies</h2>
+                            <h2 className="mb-5 text-lg font-semibold text-white uppercase dark:text-white">Legal Policies</h2>
                             <ul className="text-white dark:text-white font-medium">
-                                <li className="mb-4">
+                                <li className="mb-3">
                                     <Link to="/companypolicy" className="hover:underline">Terms &amp; Conditions</Link>
                                 </li>
                                 <li>
@@ -41,28 +41,17 @@ const Footer = () => {
                         </div>
                         {/* Support */}
                         <div>
-                            <h2 className="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Support</h2>
+                            <h2 className="mb-5 text-lg font-semibold text-white uppercase dark:text-white">Support</h2>
                             <ul className="text-white dark:text-white font-medium">
-                                <li className="mb-4">
-                                    <Link to="/companypolicy" className="hover:underline">Contact Us</Link>
+                                <li className="mb-3">
+                                    <Link to="/contact" className="hover:underline">Contact Us</Link>
                                 </li>
                                 <li>
-                                    <Link to="/companypolicy" className="hover:underline">Email</Link>
+                                    <a href="mailto:info@barracksbuddy.com" className="hover:underline">Email Us</a>
                                 </li>
                             </ul>
                         </div>
-                        {/* Transactions */}
-                        <div>
-                            <h2 className="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Transactions</h2>
-                            <ul className="text-white dark:text-white font-medium">
-                                <li className="mb-4">
-                                    <Link to="/companyPolicy" className="hover:underline">Cancellation and Refund Policy</Link>
-                                </li>
-                                <li>
-                                    <Link to="/companyPolicy" className="hover:underline">Shipping and Delivery Policy</Link>
-                                </li>
-                            </ul>
-                        </div>
+                  
                     </div>
                 </div>
 
